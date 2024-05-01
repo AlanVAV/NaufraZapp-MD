@@ -18,16 +18,16 @@
     "eslint": "eslint .",
     "eslintfix": "eslint --fix ."
   },
-  "homepage": "https://github.com/egobot-supreme/NaufraZapp-MD",
+  "homepage": "https://github.com/AlanVAV/NaufraZapp-MD",
   "author": {
-    "name": "egobot-supreme"
+    "name": "AlanVAV"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/egobot-supreme/NaufraZapp-MD.git"
+    "url": "git+https://github.com/AlanVAV/NaufraZapp-MD.git"
   },
   "bugs": {
-    "url": "https://github.com/egobot-supreme/NaufraZapp-MD/issues"
+    "url": "https://github.com/AlanVAV/NaufraZapp-MD/issues"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
