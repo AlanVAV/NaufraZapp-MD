@@ -1467,7 +1467,7 @@ export async function participantsUpdate({id, participants, action}) {
               const responseb = await m.conn.groupParticipantsUpdate(id, [user], 'remove');
               if (responseb[0].status === '404') return;
               const fkontak2 = {'key': {'participants': '0@s.whatsapp.net', 'remoteJid': 'status@broadcast', 'fromMe': false, 'id': 'Halo'}, 'message': {'contactMessage': {'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${user.split('@')[0]}:${user.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}, 'participant': '0@s.whatsapp.net'};
-              await m.conn.sendMessage(id, {text: `*[❗] @${user.split('@')[0]} 𝙚𝙣 𝙚𝙨𝙩𝙚 𝙜𝙧𝙪𝙥𝙤 𝙣𝙤 𝙥𝙚𝙧𝙢𝙞𝙩𝙞𝙢𝙤𝙨 𝙣𝙪𝙢𝙚𝙧𝙤𝙨 𝙖𝙧𝙖𝙗𝙚𝙨 𝙤 𝙧𝙖𝙧𝙤𝙨, 𝙥𝙤𝙧 𝙡𝙤 𝙦𝙪𝙚 𝙨𝙚 𝙡𝙚 𝙚𝙭𝙥𝙪𝙡𝙨𝙖𝙧𝙖 𝙙𝙚𝙡 𝙜𝙧𝙪𝙥𝙤*`, mentions: [user]}, {quoted: fkontak2});
+              await m.conn.sendMessage(id, {text: `*Hola @${user.split('@')[0]}, no se permiten numeros raros, adios...`, mentions: [user]}, {quoted: fkontak2});
               return;
             }
             await m.conn.sendFile(id, apii.data, 'pp.jpg', text, null, false, {mentions: [user]});
@@ -1526,8 +1526,8 @@ export async function callUpdate(callUpdate) {
         const callmsg = await mconn.conn.reply(nk.from, `𝙷𝚘𝚕𝚊 *@${nk.from.split('@')[0]}*, 𝚕𝚊𝚜 ${nk.isVideo ? '𝚟𝚒𝚍𝚎𝚘𝚕𝚕𝚊𝚖𝚊𝚍𝚊s' : '𝚕𝚕𝚊𝚖𝚊𝚍𝚊s'} 𝚗𝚘 𝚎𝚜𝚝𝚊́𝚗 𝚙𝚎𝚛𝚖𝚒𝚝𝚒𝚍𝚊𝚜, 𝚜𝚎𝚛𝚊́𝚜 𝚋𝚕𝚘𝚚𝚞𝚎𝚊𝚍𝚘.\n-\nSi accidentalmente llamaste póngase en contacto con mi creador para que te desbloquee!`, false, {mentions: [nk.from]});
         // let data = global.owner.filter(([id, isCreator]) => id && isCreator)
         // await this.sendContact(nk.from, data.map(([id, name]) => [id, name]), false, { quoted: callmsg })
-        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;Creador 🧸;;;\nFN:Creador 🧸\nORG:Creador 🧸\nTITLE:\nitem1.TEL;waid=573012482597:+57 301 2482597\nitem1.X-ABLabel:Creador 🧸Creador 🧸\nX-WA-BIZ-DESCRIPTION:ᴄᴏɴᴛᴀᴄᴛᴀ ᴀ ᴇsᴛᴇ ɴᴜᴍ ᴘᴀʀᴀ ᴄᴏsᴀs ɪᴍᴘᴏʀᴛᴀɴᴛᴇs.\nX-WA-BIZ-NAME:Creador 🧸\nEND:VCARD`;
-        await mconn.conn.sendMessage(nk.from, {contacts: {displayName: '𝘚𝘢𝘬𝘶𝘳𝘪𝘵𝘴𝘉𝘰𝘵 ✨', contacts: [{vcard}]}}, {quoted: callmsg});
+        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;NaufraZapp 🌎;;;\nFN:NaufraZapp 🌎\nORG:NaufraZapp 🌎\nTITLE:\nitem1.TEL;waid=573012482597:+57 301 2482597\nitem1.X-ABLabel:NaufraZapp 🌎\nX-WA-BIZ-DESCRIPTION:Solo contacteme si hay un error.\nX-WA-BIZ-NAME:NaufraZapp 🌎\nEND:VCARD`;
+        await mconn.conn.sendMessage(nk.from, {contacts: {displayName: 'NaufraZapp', contacts: [{vcard}]}}, {quoted: callmsg});
         await mconn.conn.updateBlockStatus(nk.from, 'block');
       }
     }
@@ -1564,7 +1564,7 @@ global.dfail = (type, m, conn) => {
     private: '╭•⌑┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•⌑\n│🔒     `𝐀𝐃𝐕𝐄𝐑𝐓𝐄𝐍𝐂𝐈𝐀`      🔒\n╰•⌑┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•⌑\n\n『✦』𝙀𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤 𝙨𝙤𝙡𝙤 𝙥𝙪𝙚𝙙𝙚 𝙨𝙚𝙧 𝙚𝙟𝙚𝙘𝙪𝙩𝙖𝙙𝙤 𝙚𝙣 𝙘𝙝𝙖𝙩𝙨 𝙥𝙧𝙞𝙫𝙖𝙙𝙤𝙨.',
     admin: '╭•⌑┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•⌑\n│🔒     `𝐀𝐃𝐕𝐄𝐑𝐓𝐄𝐍𝐂𝐈𝐀`      🔒\n╰•⌑┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•⌑\n\n『✦』𝙀𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙗𝙙𝙤 𝙨𝙤𝙡𝙤 𝙥𝙪𝙚𝙙𝙚 𝙨𝙚𝙧 𝙚𝙟𝙚𝙘𝙪𝙩𝙖𝙙𝙤 𝙥𝙤𝙧 𝙡𝙤𝙨 𝙖𝙙𝙢𝙞𝙣𝙨 𝙙𝙚𝙡 𝙜𝙧𝙪𝙥𝙤.',
     botAdmin: '╭•⌑┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•⌑\n│🔒     `𝐀𝐃𝐕𝐄𝐑𝐓𝐄𝐍𝐂𝐈𝐀`      🔒\n╰•⌑┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•⌑\n\n『✦』𝙀𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤 𝙨𝙤𝙡𝙤 𝙛𝙪𝙣𝙘𝙞𝙤𝙣𝙖 𝙨𝙞 𝙚𝙡 𝙗𝙤𝙩 𝙚𝙨 𝙖𝙙𝙢𝙞𝙣.',
-    unreg: '╭•⌑┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•⌑\n│🔒     `𝐀𝐃𝐕𝐄𝐑𝐓𝐄𝐍𝐂𝐈𝐀`      🔒\n╰•⌑┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•⌑\n\n『✦』𝙋𝙖𝙧𝙖 𝙪𝙨𝙖𝙧 𝙚𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤, 𝙩𝙞𝙚𝙣𝙚 𝙦𝙪𝙚 𝙧𝙚𝙜𝙞𝙨𝙩𝙧𝙖𝙧𝙨𝙚.\n\n\`#reg Nombre Edad\`\n\n𝙀𝙅𝙀𝙈𝙋𝙇𝙊:\n\`#reg Naufrago 19\`',
+    unreg: '╭•⌑┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•⌑\n│🔒     `𝐀𝐃𝐕𝐄𝐑𝐓𝐄𝐍𝐂𝐈𝐀`      🔒\n╰•⌑┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•⌑\n\n『✦』𝙋𝙖𝙧𝙖 𝙪𝙨𝙖𝙧 𝙚𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤, 𝙩𝙞𝙚𝙣𝙚 𝙦𝙪𝙚 𝙧𝙚𝙜𝙞𝙨𝙩𝙧𝙖𝙧𝙨𝙚.\n\n\`#reg Nombre.Edad\`\n\n𝙀𝙅𝙀𝙈𝙋𝙇𝙊:\n\`#reg Naufrago.19\`',
     restrict: '╭•⌑┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•⌑\n│🔒     `𝐀𝐃𝐕𝐄𝐑𝐓𝐄𝐍𝐂𝐈𝐀`      🔒\n╰•⌑┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•⌑\n\n『✦』𝙀𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤 𝙚𝙨𝙩𝙖 𝙙𝙚𝙨𝙖𝙘𝙩𝙞𝙫𝙖𝙙𝙤 𝙥𝙤𝙧 𝙚𝙡 𝙘𝙧𝙚𝙖𝙙𝙤𝙧.',
     }[type];
   const aa = {quoted: m, userJid: conn.user.jid};
