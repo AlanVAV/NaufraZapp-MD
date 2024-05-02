@@ -639,7 +639,7 @@ try {
 await conn.sendMessage(m.chat, { image: { url: imgAll.getRandom() }, gifPlayback: false, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fkontak }) 
 } catch (error) {
 try {
-await conn.sendMessage(m.chat, { image: { url: menusImgs3.getRandom() }, gifPlayback: false, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fkontak }) 
+await conn.sendMessage(m.chat, { video: { url: vi.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fkontak }) 
 } catch (error) {
 try{
 await conn.sendFile(m.chat, img5, 'menu.jpg', menu, fkontak, false, { mentions: [m.sender, global.conn.user.jid] })
