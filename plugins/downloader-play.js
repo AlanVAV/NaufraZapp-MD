@@ -15,10 +15,10 @@ const texto1 = `
 • ${yt_play[0].title}
 ﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘
 ᵖˡᵃʸ│𝗗𝘂𝗿𝗮𝗰𝗶𝗼𝗻:
-» ${secondString(yt_play[0].duration.seconds)}
+• ${secondString(yt_play[0].duration.seconds)}
 ﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘
 ᵖˡᵃʸ│
-» ${MilesNumber(yt_play[0].views)}
+• ${MilesNumber(yt_play[0].views)}
 ﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘﹘
 ᵘʳˡ│𝗘𝗻𝗹𝗮𝗰𝗲:
 • ${yt_play[0].url}
@@ -32,11 +32,7 @@ await conn.sendButton(m.chat, wm, texto1, yt_play[0].thumbnail, [['🌎 𝙈𝙚
 let listSections = [];             
 listSections.push({
 title: comienzo + ' 🎧 𝗦𝗘𝗟𝗘𝗖𝗖𝗜𝗢𝗡𝗔𝗥 🎬 ' + fin,
-rows: [{ header: "🎧 𝗔𝘂𝗱𝗶𝗼 │ 𝗡𝗭", title: "", id: `${usedPrefix}yta ${yt_play[0].url}`, description: `${yt_play[0].title}\n` }, { header: "🎧 𝗔𝘂𝗱𝗶𝗼 2 │ 𝗡𝗭", title: "", id: `${usedPrefix}play.1 ${yt_play[0].url}`, description: `${yt_play[0].title}\n` },
-{ header: "🎶 𝗔𝘂𝗱𝗶𝗼 │ 𝗗𝗼𝗰𝘂𝗺𝗲𝗻𝘁𝗼", title: "", id: `${usedPrefix}ytmp3doc ${yt_play[0].url}`, description: `${yt_play[0].title}\n` },
-{ header: "🎬 𝗩𝗶𝗱𝗲𝗼 │ 𝗡𝗭", title: "", id: `${usedPrefix}ytv ${yt_play[0].url}`, description: `${yt_play[0].title}\n` },
-{ header: "🎬 𝗩𝗶𝗱𝗲𝗼 2 │ 𝗡𝗭", title: "", id: `${usedPrefix}play.2 ${yt_play[0].url}`, description: `${yt_play[0].title}\n` },
-{header: "🎥 𝗩𝗶𝗱𝗲𝗼 │ 𝗗𝗼𝗰𝘂𝗺𝗲𝗻𝘁𝗼", title: "", id: `${usedPrefix}ytmp4doc ${yt_play[0].url}`, description: `${yt_play[0].title}\n`}
+rows: [{ header: "🎧 AUDIO │ 𝗡𝗭", title: "", id: `${usedPrefix}downaudio ${yt_play[0].url}`, description: `${yt_play[0].title}\n` }, { header: "🎬 VIDEO │ 𝗡𝗭", title: "", id: `${usedPrefix}downvideo ${yt_play[0].url}`, description: `${yt_play[0].title}\n` }
 ]});
 
 /*listSections.push({
@@ -47,7 +43,7 @@ rows: [{ header: "🎧 𝗔𝘂𝗱𝗶𝗼 │ 𝗡𝗭", title: "", id: `${use
   sections
 }) */
 
-await conn.sendList(m.chat, `𝗦𝗲𝗹𝗲𝗰𝗰𝗶𝗼𝗻𝗲 𝗹𝗼 𝗾𝘂𝗲 𝗾𝘂𝗶𝗲𝗿𝗲 𝗵𝗮𝗰𝗲𝗿 𝗰𝗼𝗻: ${text}`, `\n⬇️ 𝗗𝗲𝘀𝗰𝗮𝗿𝗴𝗮𝘀`, `📁 𝗦𝗲𝗹𝗲𝗰𝗰𝗶𝗼𝗻𝗮𝗿 📁`, listSections, {quoted: m});
+await conn.sendList(m.chat, `¿Que formato quiere para el contenido?\n\nNombre: ${text}\n`, `\n⬇️ Seleccione en este apartado ⬇️`, `🎧 𝗦𝗲𝗹𝗲𝗰𝗰𝗶𝗼𝗻𝗮𝗿 🎬`, listSections, {quoted: m});
 } catch (e) {
 await conn.reply(m.chat, `Ocurrio un error, reporte este comando con: #report.`, m)
 console.log(`ERROR, INTENTELO DE NUEVO POR FAVOR.`)
