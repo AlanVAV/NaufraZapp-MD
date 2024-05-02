@@ -4,45 +4,18 @@ import ytdl from 'ytdl-core';
 import axios from 'axios';
 import {youtubedl, youtubedlv2} from '@bochilteam/scraper';
 const handler = async (m, {conn, command, args, text, usedPrefix}) => {
-  if (!text) throw `*🥀 Escriba Un Nombre De Alguna Cancion*\n\n*Ejemplo:*\n*${usedPrefix + command} Sombra - Maiye Torrex* `;
+  if (!text) throw `Ingrese cualquier nombre, por ejemplo:*\n*${usedPrefix + command} Erika Lundmoen - yad*`;
   try {
     const yt_play = await search(args.join(' '));
     let additionalText = '';
     if (command === 'play3' || command == 'playdoc') {
-      additionalText = 'audio 🔊';
+      additionalText = 'audio';
     } else if (command === 'play4' || command == 'playdoc2') {
-      additionalText = 'video 🎥';
+      additionalText = 'video';
     }
-    await conn.sendMessage(m.chat, { react: { text: '⏳️', key: m.key } })
-    const texto1 = `*◉——⌈🔊 PLAY DOC 🔊⌋——◉*\n
-∘😻 *Titulo:*
- ${yt_play[0].title}
-
-∘⏰️ *Publicado:* 
-${yt_play[0].ago}
-
-∘⏳️ *Duracion:* 
-${secondString(yt_play[0].duration.seconds)}
-
-∘👀 *Vistas:* 
-${`${MilesNumber(yt_play[0].views)}`}
-
-∘👤 *Autor:* 
-${yt_play[0].author.name}
-
-∘🌻 *Canal:* 
-${yt_play[0].author.url}
-
-∘🪁 *ID:* 
-${yt_play[0].videoId}
-
-∘😼 *Tipo:* 
-${yt_play[0].type}
-
-∘🔗 *Link:* 
-${yt_play[0].url}\n
-
-∘ *_Enviando ${additionalText}, aguarde un momento．．．_*`.trim();
+    await conn.sendMessage(m.chat, { react: { text: '🔥', key: m.key } })
+    const texto1 = `
+⬇️ *_Descargando ${additionalText}, aguarde un momento．．．_*`.trim();
     conn.sendMessage(m.chat, {image: {url: yt_play[0].thumbnail}, caption: texto1}, {quoted: m});
     if (command == 'play3' || command == 'playdoc') {
       try {
@@ -67,7 +40,7 @@ ${yt_play[0].url}\n
             const ress = await ytdl.chooseFormat(infoo.formats, {filter: 'audioonly'});
             conn.sendMessage(m.chat, {audio: {url: ress.url}, fileName: __res[0].title + '.mp3', mimetype: 'audio/mp4'}, {quoted: m});
           } catch {
-            await conn.reply(m.chat, '*🥀 Error No Se Pudo Enviar El Audio*', m);
+            await conn.reply(m.chat, '⚠️ Ocurrio un error inesperado, intentalo de nuevo.', m);
           }
         }
       }
@@ -81,7 +54,7 @@ ${yt_play[0].url}\n
         const dl_url = await yt.video[q].download();
         const ttl = await yt.title;
         const size = await yt.video[q].fileSizeH;
-        await await conn.sendMessage(m.chat, {document: {url: dl_url}, fileName: `${ttl}.mp4`, mimetype: 'video/mp4', caption: `▢ 𝚃𝙸𝚃𝚄𝙻𝙾: ${ttl}\n▢ 𝙿𝙴𝚂𝙾 𝙳𝙴𝙻 𝚅𝙸𝙳𝙴𝙾: ${size}`, thumbnail: await fetch(yt.thumbnail)}, {quoted: m});
+        await await conn.sendMessage(m.chat, {document: {url: dl_url}, fileName: `${ttl}.mp4`, mimetype: 'video/mp4', caption: `*Titulo:* ${ttl}\n*Peso:* ${size}`, thumbnail: await fetch(yt.thumbnail)}, {quoted: m});
       } catch {
         try {
           const mediaa = await ytMp4(yt_play[0].url);
@@ -94,15 +67,15 @@ ${yt_play[0].url}\n
             const n2 = lolh.result.link;
             const n3 = lolh.result.size;
             const n4 = lolh.result.thumbnail;
-            await conn.sendMessage(m.chat, {document: {url: n2}, fileName: `${n}.mp4`, mimetype: 'video/mp4', caption: `⚘️ *Titulo:* ${n}\n🥀 *Peso Del Video:* ${n3}`, thumbnail: await fetch(n4)}, {quoted: m});
+            await conn.sendMessage(m.chat, {document: {url: n2}, fileName: `${n}.mp4`, mimetype: 'video/mp4', caption: `*Titulo:* ${n}\n*Peso:* ${n3}`, thumbnail: await fetch(n4)}, {quoted: m});
           } catch {
-            await conn.reply(m.chat, '*🥀 No Fue Posible Enviar El Video.*', m);
+            await conn.reply(m.chat, '⚠️ Error, intentalo de nuevo por favor..', m);
           }
         }
       }
     }
   } catch {
-    throw '*🥀 Error intentelo mas tarde*';
+    throw '⚠️ El comando fallo, reportelo por favor.';
   }
 };
 handler.help = ['play3', 'play4'].map((v) => v + ' < busqueda >');
