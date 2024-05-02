@@ -17,11 +17,11 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
     ['🎧 𝗠𝗨𝗦𝗜𝗖𝗔 • 𝗡𝗭 🎧', `${usedPrefix}playdoc ${url}`],
     ['🎬 𝗩𝗜𝗗𝗘𝗢 • 𝗡𝗭 🎬', `${usedPrefix}playdoc2 ${url}`],
     ['🍃 Volver al Menu 🍃', `${usedPrefix}menu`]
-  ], null, [['Canal', `${Channel}`]], m)
+  ], null, [['Canal', `${channel}`]], m)
 }
 handler.help = ['play']
 handler.tags = ['dl']
-handler.command = ['dlva', 'downav']
+handler.command = ['dlav', 'downav']
 handler.disabled = false
 
 export default handler
