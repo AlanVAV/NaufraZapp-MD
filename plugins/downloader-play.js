@@ -29,7 +29,6 @@ const texto1 = `
 
 await conn.sendButton(m.chat, wm, texto1, yt_play[0].thumbnail, [['🌎 𝙈𝙚𝙣𝙪 🌎', '/menu']], m, md)
 
-const fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 let listSections = [];             
 listSections.push({
 title: comienzo + ' 🎧 𝗦𝗘𝗟𝗘𝗖𝗖𝗜𝗢𝗡𝗔𝗥 🎬 ' + fin,
@@ -48,9 +47,9 @@ rows: [{ header: "🎧 𝗔𝘂𝗱𝗶𝗼 │ 𝗡𝗭", title: "", id: `${use
   sections
 }) */
 
-await conn.sendList(m.chat, `𝗦𝗲𝗹𝗲𝗰𝗰𝗶𝗼𝗻𝗲 𝗹𝗼 𝗾𝘂𝗲 𝗾𝘂𝗶𝗲𝗿𝗲 𝗵𝗮𝗰𝗲𝗿 𝗰𝗼𝗻: ${text}`, `\n⬇️ 𝗗𝗲𝘀𝗰𝗮𝗿𝗴𝗮𝘀`, `📁 𝗦𝗲𝗹𝗲𝗰𝗰𝗶𝗼𝗻𝗮𝗿 📁`, listSections, {quoted: fkontak});
+await conn.sendList(m.chat, `𝗦𝗲𝗹𝗲𝗰𝗰𝗶𝗼𝗻𝗲 𝗹𝗼 𝗾𝘂𝗲 𝗾𝘂𝗶𝗲𝗿𝗲 𝗵𝗮𝗰𝗲𝗿 𝗰𝗼𝗻: ${text}`, `\n⬇️ 𝗗𝗲𝘀𝗰𝗮𝗿𝗴𝗮𝘀`, `📁 𝗦𝗲𝗹𝗲𝗰𝗰𝗶𝗼𝗻𝗮𝗿 📁`, listSections, {quoted: m});
 } catch (e) {
-await conn.reply(m.chat, `Ocurrio un error, reporte este comando con: #report.`, fkontak, m)
+await conn.reply(m.chat, `Ocurrio un error, reporte este comando con: #report.`, m)
 console.log(`ERROR, INTENTELO DE NUEVO POR FAVOR.`)
 console.log(e)
 handler.limit = 0
