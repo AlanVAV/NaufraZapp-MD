@@ -121,7 +121,7 @@ global.asistencia = 'https://wa.me/5493873687620'
 
 global.menusImgs1 = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10]
 global.menusImgs2 = [iimg1, iimg2, iimg3, iimg4, iimg5]
-global.menusImgs3 = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, iimg1, iimg2, iimg3, iimg4, iimg5]
+global.menusImgs3 = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, iimg1, iimg2, iimg3, iimg4, iimg5]
 global.menusImgs4 = [imgn1, imgn2, imgn3, imgn4, imgn5, imgn6, imgn7, imgn8, imgn9, imgn10, imgn11, imgn13, imgn14]
 global.redesNZ1 = [cloudshelln, spacenaufra, gp1, gp2, gp3, paypal, creador, channel, yt, md, fb, tiktoknz, ignz]
 
