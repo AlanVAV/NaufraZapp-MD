@@ -25,6 +25,7 @@ else global.conns = []
 let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => {
 
   let parent = args[0] && args[0] == 'plz' ? _conn : await global.conn
+	const fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
   if (!((args[0] && args[0] == 'plz') || (await global.conn).user.jid == _conn.user.jid)) {
 	throw `「𐄢」Solo puedes usar este comando en el bot principal.\n\n「𐄢」 wa.me/${global.conn.user.jid.split`@`[0]}?text=${usedPrefix}serbot2`
 }
@@ -97,8 +98,9 @@ if (methodCode && !conn.authState.creds.registered) {
         codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot;
         //parent.sendMessage(m.chat, { text: `➤ Code: *${codeBot}*\n\n${mssg.botqr}` }, { quoted: m })
         parent.sendFile(m.chat, 'https://i.ibb.co/SKKdvRb/code.jpg', 'qrcode.png', `╭━━━•『🤖 𝗦𝗨𝗕 𝗕𝗢𝗧 🤖』•━• ⊹ ⋄\n┃    \`𝑵𝑨𝑼𝑭𝑹𝑨𝒁𝑨𝑷𝑷 - 𝑴𝑫 | V2\`\n╰━━━•『🤖 𝗦𝗨𝗕 𝗕𝗢𝗧 🤖』•━• ⊹ ⋄\n『✦』Sigue estos pasos para ser un *Sub-Bot*\n⊱•─────────────────•⊰\n❬1️⃣❭» Ingrese en los tres puntos en la parte superior de WhatsApp.\n⊱•─────────────────•⊰\n❬2️⃣❭» Presione en *Dispositivos Vinculados*\n⊱•─────────────────•⊰\n❬3️⃣❭» Presione en *Vincular un dispositivo*\n⊱•─────────────────•⊰\n❬4️⃣❭» En la parte inferior aparece un texto de: *Vincular con el número de teléfono*, presione en ese apartado.\n⊱•─────────────────•⊰\n❬5️⃣❭» Ingrese los 8 códigos que el bot le mandara.\n⊱•─────────────────•⊰\n❬6️⃣❭» Al realizar los pasos ya te habrás conectado.\n⊱•─────────────────•⊰\n❬💬❭» El código expira en 60 segundos...\n\n> ${wm}`, m)
-        rl.close();
-	    await conn.reply(m.chat, codeBot, fkontak, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '🤖 SUB BOT CODE 🤖', body: wm, sourceUrl: global.channel, thumbnail: global.img1 }}})
+       await conn.reply(m.chat, codeBot, fkontak, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '🤖 SUB BOT CODE 🤖', body: wm, sourceUrl: global.channel, thumbnail: global.img1 }}})
+rl.close();
+	  
     }, 3000);
 }
 
