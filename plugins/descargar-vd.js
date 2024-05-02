@@ -1,7 +1,7 @@
 import yts from 'yt-search'
 let handler = async (m, { conn, command, text, usedPrefix }) => {
 	
-  if (!text) throw `Ingrese un nombre, por ejemplo: *${usedPrefix + command}* Lil Peep hate my life`
+  if (!text) throw `Ingrese un nombre, por ejemplo: *${usedPrefix + command}* Erika Lundmoen - Yad`
 	let res = await yts(text)
 	let vid = res.videos[0]
 	if (!vid) throw `No existe.`
@@ -16,12 +16,12 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
  await conn.sendButton(m.chat, play, wm, thumbnail, [
     ['🎧 𝗠𝗨𝗦𝗜𝗖𝗔 • 𝗡𝗭 🎧', `${usedPrefix}playdoc ${url}`],
     ['🎬 𝗩𝗜𝗗𝗘𝗢 • 𝗡𝗭 🎬', `${usedPrefix}playdoc2 ${url}`],
-    ['🍁 𝗠 𝗘 𝗡 𝗨 🍁', `${usedPrefix}menu`]
-  ], null, [['🌎 𝗖𝗮𝗻𝗮𝗹 🌎', `${usedPrefix}canalnz`]], m)
+    ['🍃 Volver al Menu 🍃', `${usedPrefix}menu`]
+  ], null, [['Canal', `${Channel}`]], m)
 }
 handler.help = ['play']
 handler.tags = ['dl']
-handler.command = ['viyoutube', 'auyoutube']
+handler.command = ['dlva', 'downav']
 handler.disabled = false
 
 export default handler
