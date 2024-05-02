@@ -9,17 +9,15 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 	//const url = 'https://www.youtube.com/watch?v=' + videoId
 	m.react('🎧') 
   let play = `
-	≡ *FG MUSIC*
-┌──────────────
-▢ 📌 *Nombre:* ${vid.title}
-▢ 📆 *Publicado:* ${vid.ago}
-▢ ⌚ *Duracion:* ${vid.timestamp}
-▢ 👀 *Vistas:* ${vid.views.toLocaleString()}
-└──────────────`
+📑 » *Nombre:* ${vid.title}
+📆 » *Publicado:* ${vid.ago}
+⏳ » *Duracion:* ${vid.timestamp}
+👀 » *Vistas:* ${vid.views.toLocaleString()}`
  await conn.sendButton(m.chat, play, wm, thumbnail, [
-    ['🎶 MP3', `${usedPrefix}playdoc ${url}`],
-    ['🎥 MP4', `${usedPrefix}playdoc2 ${url}`]
-  ], null, [['Canal NZ', `${channel}`]], m)
+    ['🎧 𝗠𝗨𝗦𝗜𝗖𝗔 • 𝗡𝗭 🎧', `${usedPrefix}playdoc ${url}`],
+    ['🎬 𝗩𝗜𝗗𝗘𝗢 • 𝗡𝗭 🎬', `${usedPrefix}playdoc2 ${url}`],
+    ['🍁 𝗠 𝗘 𝗡 𝗨 🍁', `${usedPrefix}menu`]
+  ], null, [['🌎 𝗖𝗮𝗻𝗮𝗹 🌎', `${usedPrefix}canalnz`]], m)
 }
 handler.help = ['play']
 handler.tags = ['dl']
