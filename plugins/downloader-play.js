@@ -29,6 +29,7 @@ const texto1 = `
 
 await conn.sendButton(m.chat, wm, texto1, yt_play[0].thumbnail, [['🌎 𝙈𝙚𝙣𝙪 🌎', '/menu']], m, md)
 
+const fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 let listSections = [];             
 listSections.push({
 title: comienzo + ' 🎧 𝗦𝗘𝗟𝗘𝗖𝗖𝗜𝗢𝗡𝗔𝗥 🎬 ' + fin,
