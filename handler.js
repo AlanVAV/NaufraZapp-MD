@@ -946,12 +946,12 @@ export async function handler(chatUpdate) {
         if (!('delete' in chat)) chat.antidelete = false;
         if (!('antisubbots' in chat)) chat.antiBotClone = false;
         if (!('modohorny' in chat)) chat.modohorny = false;
-        if (!('reaction' in chat)) chat.reaction = true;
+        if (!('reaction' in chat)) chat.reaction = false;
         if (!('autosticker' in chat)) chat.autosticker = false;
         if (!('audios' in chat)) chat.audios = true;
-        if (!('antiLink' in chat)) chat.antiLink = true;
+        if (!('antiLink' in chat)) chat.antiLink = false;
         if (!('antiLink2' in chat)) chat.antiLink2 = false;
-        if (!('antiviewonce' in chat)) chat.antiviewonce = true;
+        if (!('antiviewonce' in chat)) chat.antiviewonce = false;
         if (!('antiToxic' in chat)) chat.antiToxic = false;
         if (!('antiTraba' in chat)) chat.antiTraba = false;
         if (!('antiArab' in chat)) chat.antiArab = false;
@@ -965,7 +965,7 @@ export async function handler(chatUpdate) {
         global.db.data.chats[m.chat] = {
           isBanned: false,
           welcome: true,
-          detect: true,
+          detect: false,
           detect2: false,
           sWelcome: '',
           sBye: '',
@@ -974,12 +974,12 @@ export async function handler(chatUpdate) {
           antidelete: false,
           antisubbots: false,
           modohorny: false,
-          reaction: true,
+          reaction: false,
           autosticker: false,
-          audios: true,
+          audios: false,
           antiLink: true,
           antiLink2: false,
-          antiviewonce: true,
+          antiviewonce: false,
           antiToxic: false,
           antiTraba: false,
           antiArab: false,
@@ -1546,7 +1546,7 @@ let date = d.toLocaleDateString('es', { day: 'numeric', month: 'long', year: 'nu
         if (!chat?.antidelete) return 
         if (!msg) return 
         if (!msg?.isGroup) return 
-                const antideleteMessage = `┏━━━━⬣  𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀  ⬣━━━━⬣\n┃🌸 *❏ Nombre:* @${participant.split`@`[0]}\n┃🕒 *❏ Hora:* ${time}\n┃📅 *❏ Fecha:* ${date}\n┃🥗 *❏ Enviando mensaje...*\n┗━━━━━━━━━━━━━━━━━⬣`.trim();
+                const antideleteMessage = `𝗔𝗡𝗧𝗜 𝗘𝗟𝗜𝗠𝗜𝗡𝗔𝗥 𝗦𝗠𝗦\n*𝗡ombre:* @${participant.split`@`[0]}\n*𝗛ora:* ${time}\n*𝗙echa:* ${date}\n*Enviando mensaje...*`.trim();
         await mconn.conn.sendMessage(msg.chat, {text: antideleteMessage, mentions: [participant]}, {quoted: msg})
         mconn.conn.copyNForward(msg.chat, msg).catch(e => console.log(e, msg))
     } catch (e) {
@@ -1568,7 +1568,7 @@ global.dfail = (type, m, conn) => {
     restrict: '╭•⌑┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•⌑\n│🔒     `𝐀𝐃𝐕𝐄𝐑𝐓𝐄𝐍𝐂𝐈𝐀`      🔒\n╰•⌑┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•⌑\n\n『✦』𝙀𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤 𝙚𝙨𝙩𝙖 𝙙𝙚𝙨𝙖𝙘𝙩𝙞𝙫𝙖𝙙𝙤 𝙥𝙤𝙧 𝙚𝙡 𝙘𝙧𝙚𝙖𝙙𝙤𝙧.',
     }[type];
   const aa = {quoted: m, userJid: conn.user.jid};
-  const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: msg, contextInfo: {externalAdReply: {title: '𝗦𝗮𝗸𝘂𝗿𝗮𝗕𝗼𝘁𝗟𝗶𝘁𝗲-𝗠𝗗 🌩', body: '❀ 𝑆𝑢𝑝𝑒𝑟 𝐵𝑜𝑡 𝐷𝑒 𝑊ℎ𝑎𝑡𝑠𝐴𝑝𝑝 ❀', thumbnail: imagen6, sourceUrl: 'https://whatsapp.com/channel/0029VaQD7LAJP216tu9liI2A'}}}}, aa);
+  const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: msg, contextInfo: {externalAdReply: {title: '⚠️ 𝗡𝗔𝗨𝗙𝗥𝗔𝗭𝗔𝗣𝗣 - 𝗠𝗗 ⚠️', body: 'Bot de WhatsApp automático', thumbnail: imagen6, sourceUrl: 'https://whatsapp.com/channel/0029VaRibRvDuMRj6ozMSN1l'}}}}, aa);
   if (msg) return conn.relayMessage(m.chat, prep.message, {messageId: prep.key.id});
 };
 
