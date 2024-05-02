@@ -21,7 +21,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 }
 handler.help = ['play']
 handler.tags = ['dl']
-handler.command = ['audiodown', 'videodown']
+handler.command = ['viyoutube', 'auyoutube']
 handler.disabled = false
 
 export default handler
