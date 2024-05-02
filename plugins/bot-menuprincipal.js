@@ -18,24 +18,6 @@ let menu = `
 ┍━━━━━━━━━━━━━━━━━━━•𖥔 ࣪˖
 │「📑ִֶָ 𖥔 ࣪˖𝑰𝒏𝒇𝒐𝒓𝒎𝒂𝒄𝒊𝒐𝒏ִֶָ 𖥔 ࣪˖📑」
 ┕━━━━━━━━━━━━━━━━━━━•𖥔 ࣪˖
-┌• ${usedPrefix}naufrago
-└•⌕ *mensionar bot*
-┌• ${usedPrefix}colaboradores
-└•⌕ *ver colaboradores*
-┌• ${usedPrefix}mirecurso
-└•⌕ *ver tus recursos*
-┌• ${usedPrefix}misdiamantes
-└•⌕ *ver tus diamantes*
-┌• ${usedPrefix}miscoins
-└•⌕ *ver tus coins*
-┌• ${usedPrefix}miexp
-└•⌕ *ver tu experiencia*
-┌• ${usedPrefix}mirango
-└•⌕ *ver tu rango*
-┌• ${usedPrefix}minivel
-└•⌕ *vee tu nivel*
-┌• ${usedPrefix}mismonedas
-└•⌕ *ver tus monedas*
 ┌• ${usedPrefix}creador
 └•⌕ *contacto del creador*
 ┌• ${usedPrefix}cuentanz
@@ -639,7 +621,7 @@ try {
 await conn.sendMessage(m.chat, { image: { url: imgAll.getRandom() }, gifPlayback: false, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fkontak }) 
 } catch (error) {
 try {
-await conn.sendMessage(m.chat, { video: { url: vi.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fkontak }) 
+await conn.sendMessage(m.chat, { image: { url: menusImgs3.getRandom() }, gifPlayback: false, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fkontak }) 
 } catch (error) {
 try{
 await conn.sendFile(m.chat, img5, 'menu.jpg', menu, fkontak, false, { mentions: [m.sender, global.conn.user.jid] })
