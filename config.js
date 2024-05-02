@@ -109,7 +109,7 @@ global.cloudshelln = 'https://shell.cloud.google.com/?show=ide%2Cterminal&authus
 global.gp1 = 'https://whatsapp.com/channel/0029VaRibRvDuMRj6ozMSN1l'
 global.gp2 = 'https://chat.whatsapp.com/IxdHYBEnUJ5Eiu3qiDjCTa'
 global.gp3 = 'https://whatsapp.com/channel/0029VaRibRvDuMRj6ozMSN1l'
-global.channel = 'https://chat.whatsapp.com/IxdHYBEnUJ5Eiu3qiDjCTa'
+global.channel = 'https://whatsapp.com/channel/0029VaRibRvDuMRj6ozMSN1l'
 global.paypal = 'https://www.paypal.me/NaufragoSolano'
 global.creador = 'https://wa.me/51929838430'
 global.yt = 'https://youtube.com/@user-bw5wl4ye8r?si=qN8bP4ZdKm3yXwbx'
