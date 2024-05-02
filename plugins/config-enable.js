@@ -1,59 +1,5 @@
 const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, isROwner}) => {
-  const optionsFull = `╭✨️⸽⃕SᴀᴋᴜʀᴀBᴏᴛLɪᴛᴇ-MD🍁⃨፝⃕✰
-┣☆ ඬ⃟⚓️ !enable welcome
-┣☆ ඬ⃟⚓️ !disable welcome
-┣☆ ඬ⃟🌐 !enable public
-┣☆ ඬ⃟🌐 !disable public
-┣☆ ඬ⃟🌐 !enable privado
-┣☆ ඬ⃟🌐 !disable privado
-┣☆ ඬ⃟🔥 !enable juegos
-┣☆ ඬ⃟🔥 !disable juegos
-┣☆ ඬ⃟🧸 !enable modohorny
-┣☆ ඬ⃟🧸 !disable modohorny
-┣☆ ඬ⃟🖇️ !enable antilink
-┣☆ ඬ⃟🖇️ !disable antilink
-┣☆ ඬ⃟🖇️ !enable antilink2
-┣☆ ඬ⃟🖇️ !disable antilink2
-┣☆ ඬ⃟🖊️ !enable detect
-┣☆ ඬ⃟🖊️ !disable detect
-┣☆ ඬ⃟🖊️ !enable detect2
-┣☆ ඬ⃟🖊️ !disable detect2
-┣☆ ඬ⃟🎭 !enable restrict
-┣☆ ඬ⃟🎭 !disable restrict
-┣☆ ඬ⃟🔮 !enable autoread
-┣☆ ඬ⃟🔮 !disable autoread
-┣☆ ඬ⃟🛡️ !enable audios
-┣☆ ඬ⃟🛡️ !disable audios
-┣☆ ඬ⃟🛡️ !enable autosticker
-┣☆ ඬ⃟🛡️ !disable autosticker
-┣☆ ඬ⃟🛡️ !enable antiviewonce
-┣☆ ඬ⃟🛡️ !disable antiviewonce
-┣☆ ඬ⃟🛡️ !enable antitoxic
-┣☆ ඬ⃟🛡️ !disable antitoxic
-┣☆ ඬ⃟🛡️ !enable reaction
-┣☆ ඬ⃟🛡️ !disable reaction
-┣☆ ඬ⃟🛡️ !enable antitraba
-┣☆ ඬ⃟🛡️ !disable antitraba
-┣☆ ඬ⃟📡 !enable pconly
-┣☆ ඬ⃟📡 !disable pconly
-┣☆ ඬ⃟📡 !enable gconly
-┣☆ ඬ⃟📡 !disable gconly
-┣☆ ඬ⃟👤 !enable anticall
-┣☆ ඬ⃟👤 !disable anticall
-┣☆ ඬ⃟👤 !enable antirabes
-┣☆ ඬ⃟👤 !disable antirabes
-┣☆ ඬ⃟👤 !enable antirabes2
-┣☆ ඬ⃟👤 !disable antirabes
-┣☆ ඬ⃟🌹 !enable modoadmin
-┣☆ ඬ⃟🌹 !disable modoadmin
-┣☆ ඬ⃟🌹 !enable simsimi
-┣☆ ඬ⃟🌹 !disable simsimi
-┣☆ ඬ⃟🌹 !enable antispam
-┣☆ ඬ⃟🌹 !disable antispam
-┣☆ ඬ⃟🌹 !enable modoia
-┣☆ ඬ⃟🌹 !disable modoia
-╰━━━━━━━✦✗✦━━━━━━━━
-𝘉𝘺: 𝘋𝘪𝘦𝘨𝘰𝘖𝘧𝘪𝘤𝘪𝘢𝘭✨`.trim();
+  const optionsFull = `Las funciones de mostrar el apagado y activado, no estan disponibles aun.`.trim();
 
             const isEnable = /true|enable|(turn)?on|1/i.test(command);
   const chat = global.db.data.chats[m.chat];
@@ -371,7 +317,7 @@ break;
       if (!/[01]/.test(command)) return await conn.sendMessage(m.chat, {text: optionsFull}, {quoted: m});
       throw false;
   }
-     conn.sendMessage(m.chat, {text: `ꨄ︎ *🧸 Tipo*: ${type}\nꨄ︎ *📍 Estado*: ${isEnable ? 'Activo ✅️' : 'Desactivo ❎️'}\nꨄ︎ *🧩 Para*: ${isAll ? '𝙎𝙖𝙠𝙪𝙧𝙖𝘽𝙤𝙩𝙇𝙞𝙩𝙚-𝙈𝘿 ' : isUser ? '' : 'Este Chat'}`}, {quoted: m});
+     conn.sendMessage(m.chat, {text: `*COMANDO:* ${type}\n*FUNCION:* ${isEnable ? 'Activo' : 'Desactivo'}\n*EJECUTADO EN:* ${isAll ? 'NaufraZapp-MD ' : isUser ? '' : 'Este Chat'}`}, {quoted: m});
 };
 handler.help = ['en', 'dis'].map((v) => v + 'able <option>');
 handler.tags = ['group', 'owner'];
