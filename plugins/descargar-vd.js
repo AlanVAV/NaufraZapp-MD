@@ -8,7 +8,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 	if (!vid) throw `No encontrado`
 	let { title, description, thumbnail, videoId, timestamp, views, ago, url } = vid
 	//const url = 'https://www.youtube.com/watch?v=' + videoId
-	m.react('🥳') 
+	m.react('🎬') 
   let play = `
 Titulo: ${vid.title}
 Publicado: ${vid.ago}
@@ -16,8 +16,10 @@ Duración: ${vid.timestamp}
 Vistas: ${vid.views.toLocaleString()}`
  await conn.sendButton(m.chat, play, wm, thumbnail, [
     ['🔊 AUDIO 🔊', `${usedPrefix}playdoc ${url}`],
-    ['🎬 VIDEO 🎬', `${usedPrefix}playdoc2 ${url}`]
-  ], null, [['Canal', `${channel}`]], m)
+    ['🎬 VIDEO 🎬', `${usedPrefix}playdoc2 ${url}`],
+    ['✅ Auto Verify ✅', `${usedPrefix}reg subNZ.18`],
+    ['🎒 Menu Completo 🎒', `${usedPrefix}menucompleto`],
+ ], null, [['Canal', `${channel}`]], m)
 }
 handler.help = ['play']
 handler.tags = ['dl']
