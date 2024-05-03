@@ -14,7 +14,7 @@ let str = `*💥 GRUPOS OFICIALES🐦‍🔥*
 
   *💥 CANAL OFICIAL🐦‍🔥*
 
-    *_╭━━━⊜ Canal NaufraZapp-MD_*
+    *_Canal NaufraZapp-MD_*
   *❏ ${channel}*
 *_Unete_*`
 await conn.sendFile(m.chat, media, 'gata.mp4', str, fkontak)}
