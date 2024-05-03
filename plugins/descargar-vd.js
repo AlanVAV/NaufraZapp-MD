@@ -14,6 +14,8 @@ const texto1 = `🐦‍🔥 ᵖˡᵃʸ│𝗡𝗼𝗺𝗯𝗿𝗲:
 • ${secondString(yt_play[0].duration.seconds)}
 ⊱•───────• ${vs} •───────•⊰
 🐦‍🔥 ᵖˡᵃʸ│𝗩𝗶𝘀𝘁𝗮𝘀:
+
+> NZ
 • ${MilesNumber(yt_play[0].views)}`.trim()
 
 await conn.sendButton(m.chat, wm, texto1, yt_play[0].thumbnail, [['🍃 𝗠𝗲𝗻𝘂 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗼 🍃', '/menucompleto']], m, md)
@@ -68,4 +70,5 @@ const hDisplay = h > 0 ? h + (h == 1 ? ' hora, ' : ' horas, ') : '';
 const mDisplay = m > 0 ? m + (m == 1 ? ' minuto, ' : ' minutos, ') : '';
 const sDisplay = s > 0 ? s + (s == 1 ? ' segundo' : ' segundos') : '';
 return dDisplay + hDisplay + mDisplay + sDisplay;
-}
+  }
+                                                                                                                                
