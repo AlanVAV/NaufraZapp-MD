@@ -14,9 +14,9 @@ Titulo: ${vid.title}
 Publicado: ${vid.ago}
 Duración: ${vid.timestamp}
 Vistas: ${vid.views.toLocaleString()}`
- await conn.sendButton2(m.chat, play, wm, thumbnail, [
-    ['MP3', `${usedPrefix}playdoc ${url}`],
-    ['MP4', `${usedPrefix}playdoc2 ${url}`]
+ await conn.sendButton(m.chat, play, wm, thumbnail, [
+    ['🔊 AUDIO 🔊', `${usedPrefix}playdoc ${url}`],
+    ['🎬 VIDEO 🎬', `${usedPrefix}playdoc2 ${url}`]
   ], null, [['Canal', `${channel}`]], m)
 }
 handler.help = ['play']
