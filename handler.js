@@ -1277,11 +1277,11 @@ _Si Consideras Que Es Un Error Y Si Tienes Pruebas, Puedes Comunicarte Con El Pr
           m.exp += xp;
         }
         if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-          mconn.conn.reply(m.chat, `*💎 Te As Quedado Sin Diamantes, Compra Dimantes Utilizando El Comando: ${usedPrefix}buyall*`, m);
+          mconn.conn.reply(m.chat, `*No tienew diamantes, usa el comando: ${usedPrefix}buyall*`, m);
           continue; 
         }
         if (plugin.level > _user.level) {
-          mconn.conn.reply(m.chat, `*🧸 Se Requiere Tener El Nivel ${plugin.level} Para Poder Utilizar El Comando. Tu Nivel Actual Es ${_user.level}, Usa El Comando: ${usedPrefix} lvl Para Subir De Nivel Con Exp.*`, m);
+          mconn.conn.reply(m.chat, `*No tienes el nivel 5, tu nivel es: ${_user.level}, para subir de nivel , use: ${usedPrefix} levelup*`, m);
           continue; 
         }
         const extra = {
@@ -1350,7 +1350,7 @@ _Si Consideras Que Es Un Error Y Si Tienes Pruebas, Puedes Comunicarte Con El Pr
             }
           }
           if (m.limit) {
-            m.reply('*🧸 Se Usaron ' + +m.limit + ' Diamante(s) (Limite).*');
+            m.reply('*Gastaste: ' + +m.limit + ' Diamante(s) (Limite).*');
           }
         }
         break;
