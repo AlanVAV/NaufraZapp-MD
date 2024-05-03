@@ -21,24 +21,22 @@ const handler = async (m, { conn, usedPrefix }) => {
   const old = performance.now();
   const neww = performance.now();
   const speed = neww - old;
-    await conn.sendMessage(m.chat, { react: { text: '🥀', key: m.key } })
+    await conn.sendMessage(m.chat, { react: { text: '🛰️', key: m.key } })
   const info = `
+「🤖 \`ESTADISTICAS\` 🤖」
 
-╭━━━━━━･❪ ❁ ❫ ･━━━━━━
-│➸ *⏰️Actividad*
-│➸ *${uptime}*
-│
-│•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•
-│
-│➸ *🧸Chats*
-│➸ 𝘊𝘩𝘢𝘵𝘴 𝘗𝘳𝘪𝘷𝘢𝘥𝘰𝘴: *${chats.length - groups.length}*
-│➸ 𝘊𝘩𝘢𝘵𝘴 𝘋𝘦 𝘎𝘳𝘶𝘱𝘰𝘴: *${groups.length}* 
-│➸ 𝘊𝘩𝘢𝘵𝘴 𝘛𝘰𝘵𝘢𝘭𝘦𝘴: *${chats.length}* 
-│
-│•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•
-│
-│➸ 𝙎𝙖𝙠𝙪𝙧𝙖𝘽𝙤𝙩𝙇𝙞𝙩𝙚-𝙈𝘿🧸📍
-╰━━━━━━･❪ ❁ ❫ ･━━━━━━❖`.trim();
+✧ ᵇᵒᵗ│𝗧𝗜𝗘𝗠𝗣𝗢 𝗔𝗖𝗧𝗜𝗩𝗢:
+• *${uptime}*
+
+✧ ᵇᵒᵗ│𝗣𝗥𝗜𝗩𝗔𝗧𝗘 𝗖𝗛𝗔𝗧𝗦:
+• *${chats.length - groups.length}*
+
+✧ ᵇᵒᵗ│𝗚𝗥𝗢𝗨𝗣 𝗖𝗛𝗔𝗧𝗦:
+• *${groups.length}* 
+
+✧ ᵇᵒᵗ│𝗖𝗛𝗔𝗧𝗦 𝗔𝗟𝗟:
+*${chats.length}* 
+`.trim();
   const doc = [
     "pdf",
     "zip",
@@ -48,29 +46,34 @@ const handler = async (m, { conn, usedPrefix }) => {
   ];
   const document = doc[Math.floor(Math.random() * doc.length)];
   const Message = {
-    document: { url: `https://github.com/diegojadibot/SakuraBotLite-MD` },
+    document: { url: `https://whatsapp.com/channel/0029VaRibRvDuMRj6ozMSN1l` },
     mimetype: `application/${document}`,
-    fileName: `Sakura Bot Lite 🌸`,
+    fileName: `💯 NaufraZapp-MD 💯`,
     fileLength: 99999999999999,
     pageCount: 200,
     contextInfo: {
       forwardingScore: 200,
       isForwarded: true,
       externalAdReply: {
-        mediaUrl: "https://github.com/diegojadibot/SakuraBotLite-MD",
+        mediaUrl: "https://whatsapp.com/channel/0029VaRibRvDuMRj6ozMSN1l",
         mediaType: 2,
         previewType: "pdf",
-        title: "Tᴜ Mᴇᴊᴏʀ Bᴏᴛ!",
+        title: "Bot de WhatsApp automático",
         body: wm,
-        thumbnail: imagen6,
-        sourceUrl: "https://atom.bio/sakuralite",
+        thumbnail: menusImgs4,
+        sourceUrl: "https://whatsapp.com/channel/0029VaRibRvDuMRj6ozMSN1l",
       },
     },
     caption: info,
     footer: wm,
     headerType: 6,
   };
-  conn.sendMessage(m.chat, Message, { quoted: m });
+  //conn.sendMessage(m.chat, Message, { quoted: m });
+  await conn.sendButton(m.chat, Message, wm, thumbnail, [
+    ['♾️ 𝗘𝗦𝗧𝗔𝗗𝗢 ♾️', `${usedPrefix}estado`],
+    ['🌎 𝗠𝗘𝗡𝗨 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗢 🌎', `${usedPrefix}allmenu`],
+    ['🍁 𝗚𝗥𝗨𝗣𝗢 • 𝗡𝗭 🍁', `${usedPrefix}comprar`]
+  ], null, [['Canal', `${channel}`]], m)
 };
 handler.help = ["infobot", "speed"];
 handler.tags = ["info", "tools"];
