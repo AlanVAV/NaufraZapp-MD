@@ -15,7 +15,7 @@ let m2 = `
     conn.sendButton(m.chat, m2, wm, pp, [
       ['⏍ Info', `${usedPrefix}botinfo`],
       ['⌬ Grupos', `${usedPrefix}gpdylux`]
-    ],m, rpl)
+    ],m)
     /*conn.sendFile(m.chat, pp, 'menu.jpg', m2, m, null, rpl)*/
    
 }
