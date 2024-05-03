@@ -1,38 +1,16 @@
 let handler = async (m, { conn, command, usedPrefix }) => {
-let txt = `*\`💫 Te presentamos un nuevo hosting: "Infinity-Wa Host"\`*
+let txt = `👀💬 ¿Quieres el bot 24/7 en tu grupo? ✨🥳
 
-*¿Muy lento tu nokia y necesitas tener activo tu bot 24/7?*
+• 🍃🌳 Contactate conmigo en el numero: 🔥🍁
+• wa.me/51929838430
 
-> *Te tenemos la mejor opción para mantener activo tu bot 24/7, a precios muy accesibles. Es muy barato y todos pueden comprar.*
+🍃🍁 Puedes entrar am grupo oficial 🔱🌳
+• https://chat.whatsapp.com/IxdHYBEnUJ5Eiu3qiDjCTa
+> 🌳🍃 Recuerda que no se admiten bots en este grupo 🔥🍁
 
-*🚩Precios :*
-* 1GB, 100 CPU = 1Dolar
-* 2GB, 120 CPU = 2Dolar
-* 3GB, 140 CPU = 3Dolar
-* 4GB, 175 CPU = 4Dolar
-* 5GB, 200 CPU = 5 Dólar. 
+❤️🎒 Recuerda estar atento en el canal oficial 💚🥳
 
-🟢 \`\`\`Información del Host\`\`\`
-
-💻 *Página:*
-https://host.panel-infinitywa.store
-
-🧡 *Canal de WhatsApp:*
-https://whatsapp.com/channel/0029Va4QjH7DeON0ePwzjS1A
-
-💚 *Grupo:*
-https://chat.whatsapp.com/GQ82mPnSYnm0XL2hLPk7FV
-
-🛍️ *Método de pago:*
-*• PayPal :* paypal.me/OfcGB
-*• Mercado pago, alías:* OficialGB
-*• Naranja x, alías:* OficialGL
-*• Yape (Perú) :* +51948705559
-
-*\`💙 Contactanos para más información o alquidir los servicios:\`*
-• https://www.facebook.com/elrebelde21
-• wa.me/527294888993
-• wa.me/5492964650915`
+🐦‍🔥 𝑵𝒂𝒖𝒇𝒓𝒂𝒁𝒂𝒑𝒑-𝑴𝑫 🐦‍🔥`
 await conn.sendMessage(m.chat, { text: txt,
 contextInfo:{
 forwardingScore: 9999999,
@@ -40,14 +18,15 @@ isForwarded: false,
 "externalAdReply": {
 "showAdAttribution": true,
 "containsAutoReply": true,
-title: `🤖 𝐈𝐍𝐅𝐈𝐍𝐈𝐓𝐘𝐖𝐀-𝐇𝐎𝐒𝐓 🤖`,
-body: `✅ Hosting de Calidad`,
+title: `🥳✨ 𝐁𝐎𝐓 🎊 *24/7* ✨🥳`,
+body: `🐦‍🔥 ¡¡¡𝙊𝙗𝙩𝙚𝙣𝙡𝙤 𝙖𝙝𝙤𝙧𝙖!!! 🐦‍🔥`,
 "previewType": "PHOTO",
-thumbnailUrl: 'https://qu.ax/EQTd.jpg', 
-sourceUrl: 'https://whatsapp.com/channel/0029Va4QjH7DeON0ePwzjS1A'}}},
+thumbnailUrl: menusImgs2, 
+sourceUrl: 'https://whatsapp.com/channel/0029VaRibRvDuMRj6ozMSN1l'}}},
 { quoted: m})
 }
 handler.tags =['info'] 
 handler.help = ['infinity', 'host', 'hosting'] 
 handler.command = /^(comprar|hosting)$/i
 export default handler
+  
