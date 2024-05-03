@@ -41,7 +41,7 @@ console.log(`𝙍𝙚𝙥𝙤𝙧𝙩𝙖 𝙚𝙡 𝙘𝙤𝙢𝙖𝙣𝙙𝙤 
 console.log(e)
 handler.limit = 0
 }}
-handler.command = ['downav', 'dlav', 'buscaryt']
+handler.command = ['downva', 'dlva', 'buscarytav']
 //handler.limit = 3
 //handler.register = true 
 export default handler;
