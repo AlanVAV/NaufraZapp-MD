@@ -12,7 +12,7 @@ let m2 = `
 └──────────────
 `
     let pp = imagen4; 
-    conn.sendButton(m.chat, m2, wm, pp, [
+    await conn.sendButton(m.chat, m2, wm, pp, [
       ['⏍ Info', `${usedPrefix}botinfo`],
       ['⌬ Grupos', `${usedPrefix}gpdylux`]
     ],m)
