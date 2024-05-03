@@ -21,7 +21,7 @@ const handler = async (m, { conn, usedPrefix }) => {
   const old = performance.now();
   const neww = performance.now();
   const speed = neww - old;
-    await conn.sendMessage(m.chat, { react: { text: '🛰️', key: m.key } })
+    await conn.sendMessage(m.chat, { react: { text: '🚀', key: m.key } })
   const info = `
 「🤖 \`ESTADISTICAS\` 🤖」
 
@@ -73,7 +73,7 @@ const handler = async (m, { conn, usedPrefix }) => {
     ['♾️ 𝗘𝗦𝗧𝗔𝗗𝗢 ♾️', `${usedPrefix}estado`],
     ['🌎 𝗠𝗘𝗡𝗨 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗢 🌎', `${usedPrefix}allmenu`],
     ['🍁 𝗚𝗥𝗨𝗣𝗢 • 𝗡𝗭 🍁', `${usedPrefix}comprar`]
-  ], null, [['Canal', `${channel}`]], m)
+  ], m)
 };
 handler.help = ["infobot", "speed"];
 handler.tags = ["info", "tools"];
