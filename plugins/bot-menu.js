@@ -13,7 +13,7 @@ let m2 = `
 `
     let pp = imagen4; 
     await conn.sendButton(m.chat, m2, `${wm}`, null, [ 
-[`menu completo`, '.allmenu']], m, { mentions: await conn.parseMention(caption) })
+[`menu completo`, '.allmenu']], m, { mentions: await conn.parseMention(m2) })
     /*conn.sendFile(m.chat, pp, 'menu.jpg', m2, m, null, rpl)*/
    
 }
