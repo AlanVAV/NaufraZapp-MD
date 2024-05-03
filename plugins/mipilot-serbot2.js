@@ -212,7 +212,7 @@ bbts()
 }
 handler.help = ['botclone']
 handler.tags = ['bebot']
-handler.command = ['serbot2', 'codesub2', 'jadibot2', 'botclone2', 'clonebot2']
+handler.command = ['nzcode', 'codesub2', 'jadibot2', 'botclone2', 'clonebot2']
 handler.register = true
 handler.private = true
 
