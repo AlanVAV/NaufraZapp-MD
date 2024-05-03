@@ -1,4 +1,4 @@
-/*import fetch from 'node-fetch';
+import fetch from 'node-fetch';
 import yts from 'yt-search';
 import ytdl from 'ytdl-core';
 import axios from 'axios';
@@ -25,7 +25,7 @@ listSections.push({
 title: '⬇️' DESCARGAS ⬇️,
 rows: [{ header: "🔊 𝗔𝗨𝗗𝗜𝗢 🔊", title: "", id: `${usedPrefix}playdoc ${yt_play[0].url}`, description: `${yt_play[0].title}\n` }, { header: "🎬 𝗩𝗜𝗗𝗘𝗢 🎬", title: "", id: `${usedPrefix}playdoc2 ${yt_play[0].url}`, description: `${yt_play[0].title}\n` }
 ]});
-*/
+
 /*listSections.push({
   text: `*𝙀𝙇𝙄𝙅𝘼 𝙌𝙐𝙀 𝙑𝘼 𝙃𝘼𝘾𝙀𝙍 𝘾𝙊𝙉  ${text}*`,
   footer: global.wm,
@@ -33,7 +33,7 @@ rows: [{ header: "🔊 𝗔𝗨𝗗𝗜𝗢 🔊", title: "", id: `${usedPrefix}
   buttonText: `🍄 𝙀𝙇𝙀𝙍𝙂𝙄𝙍 🍁`,
   sections
 }) */
-/*
+
 await conn.sendList(m.chat, `𝗡𝗢𝗠𝗕𝗥𝗘 𝗗𝗘𝗟 𝗖𝗢𝗡𝗧𝗘𝗡𝗜𝗗𝗢:\n• *${text}*`, `\n🍁 𝙉𝙖𝙪𝙛𝙧𝙖𝙕𝙖𝙥𝙥-𝙈𝘿 🍁`, `🗂️ 𝙎𝙚𝙡𝙚𝙘𝙘𝙞𝙤𝙣𝙖𝙧 🗂️`, listSections, {quoted: fkontak});
 } catch (e) {
 await conn.reply(m.chat, `𝙊𝙘𝙪𝙧𝙧𝙞𝙤 𝙪𝙣 𝙚𝙧𝙧𝙤𝙧 𝙞𝙣𝙚𝙨𝙥𝙚𝙧𝙖𝙙𝙤 𝙚𝙣 𝙡𝙖 𝙙𝙚𝙨𝙘𝙖𝙧𝙜𝙖...\n\n${wm}`, fkontak, m)
@@ -71,4 +71,4 @@ const mDisplay = m > 0 ? m + (m == 1 ? ' minuto, ' : ' minutos, ') : '';
 const sDisplay = s > 0 ? s + (s == 1 ? ' segundo' : ' segundos') : '';
 return dDisplay + hDisplay + mDisplay + sDisplay;
   }
-   */                                                                                                                             
+                                                                                                                                
