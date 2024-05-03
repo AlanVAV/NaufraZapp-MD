@@ -69,7 +69,7 @@ const handler = async (m, { conn, usedPrefix }) => {
     headerType: 6,
   };
   //conn.sendMessage(m.chat, Message, { quoted: m });
-  await conn.sendButton(m.chat, Message, wm, [
+  conn.sendButton(m.chat, Message, wm, [
     ['♾️ 𝗘𝗦𝗧𝗔𝗗𝗢 ♾️', `${usedPrefix}estado`],
     ['🌎 𝗠𝗘𝗡𝗨 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗢 🌎', `${usedPrefix}allmenu`],
     ['🍁 𝗚𝗥𝗨𝗣𝗢 • 𝗡𝗭 🍁', `${usedPrefix}comprar`]
