@@ -1,4 +1,4 @@
-
+/*
 const _0x54c6f6 = _0x32c8;
 (function (_0x1c7d2b, _0x4010ba) {
     const _0x95d645 = _0x32c8, _0x471f7b = _0x1c7d2b();
@@ -931,3 +931,4 @@ const delay = _0x4729af => new Promise(_0x3184ce => setTimeout(_0x3184ce, _0x472
 function sleep(_0x4b731a) {
     return new Promise(_0x49d525 => setTimeout(_0x49d525, _0x4b731a));
 }
+*/
