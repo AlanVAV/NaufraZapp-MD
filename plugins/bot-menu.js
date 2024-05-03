@@ -97,15 +97,15 @@ description: "Infórmate por medios oficiales sobre GataBot",
 sections: [
 { title: "✅ MENU ✅", highlight_label: "Popular",
 rows: [
-{ header: "👋🏻 Menu completo", title: "NaufraZapp", description: "Ver el menu de NaufraZapp-MD 👋🏻", id: usedPrefix + "menucompleto" }
+{ header: "👋🏻 Menu completo", title: "NaufraZapp", description: "Ver el menu de NaufraZapp-MD 👋🏻", id: `${usedPrefix}menucompleto` }
 ]},
 { title: "✅ REGISTRARTE ✅", highlight_label: "Popular",
 rows: [
-{ header: "🥳 Autoregistro", title: "NaufraZapp-MD", description: "Registrate automáticamente", id: usedPrefix + "reg subNZ.18" }
+{ header: "🥳 Autoregistro", title: "NaufraZapp-MD", description: "Registrate automáticamente", id: `${usedPrefix}reg subNZ.18` }
 ]},
 { title: "👤 Creador 👤", highlight_label: "Popular",
 rows: [
-{ header: "💎 Ver al creador", title: "", description: "Habla con el creador si tienes dudas", id: usedPrefix + "creador" }
+{ header: "💎 Ver al creador", title: "Creador del bot", description: "Habla con el creador si tienes dudas", id: `${usedPrefix}creador` }
 ]}
 ]})
 const interactiveMessage = {
