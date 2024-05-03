@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+/*import fetch from 'node-fetch';
 import yts from 'yt-search';
 import ytdl from 'ytdl-core';
 import axios from 'axios';
@@ -34,7 +34,7 @@ listSections.push({
 title: comienzo + ' 🎧 𝗦𝗘𝗟𝗘𝗖𝗖𝗜𝗢𝗡𝗔𝗥 🎬 ' + fin,
 rows: [{ header: "🎧 AUDIO │ 𝗡𝗭", title: "", id: `${usedPrefix}playdoc ${yt_play[0].url}`, description: `${yt_play[0].title}\n` }, { header: "🎬 VIDEO │ 𝗡𝗭", title: "", id: `${usedPrefix}playdoc2 ${yt_play[0].url}`, description: `${yt_play[0].title}\n` }
 ]});
-
+*/
 /*listSections.push({
   text: `*𝙀𝙇𝙄𝙅𝘼 𝙌𝙐𝙀 𝙑𝘼 𝙃𝘼𝘾𝙀𝙍 𝘾𝙊𝙉  ${text}*`,
   footer: global.wm,
@@ -42,7 +42,7 @@ rows: [{ header: "🎧 AUDIO │ 𝗡𝗭", title: "", id: `${usedPrefix}playdoc
   buttonText: `🍄 𝙀𝙇𝙀𝙍𝙂𝙄𝙍 🍁`,
   sections
 }) */
-
+/*
 await conn.sendList(m.chat, `¿Que formato quiere para el contenido?\n\nNombre: ${text}\n`, `\n⬇️ Seleccione en este apartado ⬇️`, `🎧 𝗦𝗲𝗹𝗲𝗰𝗰𝗶𝗼𝗻𝗮𝗿 🎬`, listSections, {quoted: m});
 } catch (e) {
 await conn.reply(m.chat, `Ocurrio un error, reporte este comando con: #report.`, m)
@@ -80,5 +80,5 @@ const mDisplay = m > 0 ? m + (m == 1 ? ' minuto, ' : ' minutos, ') : '';
 const sDisplay = s > 0 ? s + (s == 1 ? ' segundo' : ' segundos') : '';
 return dDisplay + hDisplay + mDisplay + sDisplay;
   }
-                      
+  */                    
 
