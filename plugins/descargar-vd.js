@@ -7,7 +7,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 	if (!vid) throw `No existe.`
 	let { title, description, thumbnail, videoId, timestamp, views, ago, url } = vid
 	//const url = 'https://www.youtube.com/watch?v=' + videoId
-	//m.react('🎧') 
+	m.react('✅') 
   let play = `
 🐦‍🔥 ᵖˡᵃʸ│𝗡𝗼𝗺𝗯𝗿𝗲:
 ${vid.title}
