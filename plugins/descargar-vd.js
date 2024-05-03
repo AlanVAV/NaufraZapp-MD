@@ -9,14 +9,18 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 	//const url = 'https://www.youtube.com/watch?v=' + videoId
 	m.react('🎧') 
   let play = `
-📑 » *Nombre:* ${vid.title}
-📆 » *Publicado:* ${vid.ago}
-⏳ » *Duracion:* ${vid.timestamp}
-👀 » *Vistas:* ${vid.views.toLocaleString()}`
+🐦‍🔥 ᵖˡᵃʸ│𝗡𝗼𝗺𝗯𝗿𝗲:
+${vid.title}
+⊱•───────• ${vs} •───────•⊰
+🐦‍🔥 ᵖˡᵃʸ│𝗗𝘂𝗿𝗮𝗰𝗶𝗼𝗻:
+${vid.timestamp}
+⊱•───────• ${vs} •───────•⊰
+🐦‍🔥 ᵖˡᵃʸ│𝗩𝗶𝘀𝘁𝗮𝘀:
+${vid.views.toLocaleString()}`
  await conn.sendButton(m.chat, play, wm, thumbnail, [
-    ['🎧 𝗠𝗨𝗦𝗜𝗖𝗔 • 𝗡𝗭 🎧', `${usedPrefix}playdoc ${url}`],
-    ['🎬 𝗩𝗜𝗗𝗘𝗢 • 𝗡𝗭 🎬', `${usedPrefix}playdoc2 ${url}`],
-    ['🍃 Volver al Menu 🍃', `${usedPrefix}menu`]
+    ['❬🔊❭ 𝗔 𝗨 𝗗 𝗜 𝗢 ❬🔊❭', `${usedPrefix}playdoc ${url}`],
+    ['❬🎬❭ 𝗩 𝗜 𝗗 𝗘 𝗢 ❬🎬❭', `${usedPrefix}playdoc2 ${url}`],
+    ['「🍁 𝗔𝗟𝗟 𝗠𝗘𝗡𝗨 🍁」', `${usedPrefix}menu`]
   ], null, [['Canal', `${channel}`]], m)
 }
 handler.help = ['play']
