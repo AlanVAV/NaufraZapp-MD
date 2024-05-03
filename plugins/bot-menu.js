@@ -12,7 +12,7 @@ let m2 = `
 └──────────────
 `
     let pp = imagen4; 
-    await conn.sendButton(m.chat, play, wm, pp, [
+    await conn.sendButton(m.chat, m2, wm, pp, [
     ['❬🔊❭ 𝗔 𝗨 𝗗 𝗜 𝗢 ❬🔊❭', `${usedPrefix}playdoc`],
     ['❬🎬❭ 𝗩 𝗜 𝗗 𝗘 𝗢 ❬🎬❭', `${usedPrefix}playdoc2`],
     ['「🍁 𝗔𝗟𝗟 𝗠𝗘𝗡𝗨 🍁」', `${usedPrefix}menu`]
