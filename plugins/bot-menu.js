@@ -89,28 +89,23 @@ const horarioFecha = lugarFecha.format('dddd, DD [de] MMMM [del] YYYY || HH:mm A
 
 if (!/web|desktop|unknown/gi.test(dispositivo)) {  
 let menu = `
-Hola`.trim()
+⬇️ SELECCIONE ⬇️`.trim()
       
 const buttonParamsJson = JSON.stringify({
 title: "VER LISTA",
 description: "Infórmate por medios oficiales sobre GataBot",
 sections: [
-{ title: "ℹ️ Información", highlight_label: "Popular",
+{ title: "✅ MENU ✅", highlight_label: "Popular",
 rows: [
-{ header: "✅ Redes", title: "🔓 Para: Todos", description: "Infórmate por medios oficiales sobre GataBot", id: usedPrefix + "cuentasnz" },
-{ header: "📢 Grupos/Canales", title: "🔓 Para: Todos", description: "¡Te esperamos!", id: usedPrefix + "grupos" },
-{ header: "🎁 Donar", title: "🔓 Para: Todos", description: "GataBot se mantiene funcionando gracias a donaciones ¡tú también puedes sumarte apoyando el proyecto!", id: usedPrefix + "donar" }
+{ header: "👋🏻 Menu completo", title: "NaufraZapp", description: "Ver el menu de NaufraZapp-MD 👋🏻", id: usedPrefix + "menucompleto" }
 ]},
-{ title: "🔖 Atajos", highlight_label: "Popular",
+{ title: "✅ REGISTRARTE ✅", highlight_label: "Popular",
 rows: [
-{ header: "🆕 Ser Bot (código)", title: "🔓 Para: Todos", description: "¡Conviértete en Bot con el método de código de 8 dígitos!", id: usedPrefix + "serbot --code" },
-{ header: "🤖 Ser Bot (qr)", title: "🔓 Para: Todos", description: "Forma estándar de ser bot con código QR", id: usedPrefix + "serbot" },
-{ header: "🚄 Velocidad", title: "🔓 Para: Todos", description: "Seleccione esto si desea saber el ping del Bot", id: usedPrefix + "ping" },
-{ header: "😺 Estado", title: "🔓 Para: Todos", description: "Conoce en que estado se encuentra GataBot", id: usedPrefix + "estado" }
+{ header: "🥳 Autoregistro", title: "NaufraZapp-MD", description: "Registrate automáticamente", id: usedPrefix + "reg subNZ.18" }
 ]},
-{ title: "Ⓜ️ Menú", highlight_label: "Popular",
+{ title: "👤 Creador 👤", highlight_label: "Popular",
 rows: [
-{ header: "⭐ Menú completo", title: "", description: "Visita todos los comandos", id: usedPrefix + "allmenu" }
+{ header: "💎 Ver al creador", title: "", description: "Habla con el creador si tienes dudas", id: usedPrefix + "creador" }
 ]}
 ]})
 const interactiveMessage = {
