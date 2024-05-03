@@ -1,17 +1,3 @@
-/*⚠ PROHIBIDO EDITAR ⚠
-
-El codigo de este archivo esta totalmente hecho por:
-- Aiden_NotLogic >> https://github.com/ferhacks
-
-El codigo de este archivo fue parchado por:
-- ReyEndymion >> https://github.com/ReyEndymion
-- BrunoSobrino >> https://github.com/BrunoSobrino
-
-Contenido adaptado por:
-- GataNina-Li >> https://github.com/GataNina-Li
-- elrebelde21 >> https://github.com/elrebelde21
-- AzamiJs >> https://github.com/AzamiJs
-*/
 
 const _0x54c6f6 = _0x32c8;
 (function (_0x1c7d2b, _0x4010ba) {
@@ -51,7 +37,7 @@ function _0x5eec() {
         'groupsUpdate',
         '../handler.js',
         'GQUEd',
-        '🧿\x20*La\x20conexión\x20se\x20ha\x20cerrado,\x20tendras\x20que\x20volver\x20a\x20conectarse\x20usando:*\x0a!deletesesion\x20(Para\x20borrar\x20los\x20datos\x20y\x20poder\x20volver\x20a\x20solitar\x20el\x20QR\x20o\x20el\x20código\x20de\x20emparejamiento',
+        '•\x20*La\x20conexión\x20se\x20ha\x20cerrado,\x20tendras\x20que\x20volver\x20a\x20conectarse\x20usando:*\x0a!deletesesion\x20(Para\x20borrar\x20los\x20datos\x20y\x20poder\x20volver\x20a\x20solitar\x20el\x20QR\x20o\x20el\x20código\x20de\x20emparejamiento',
         'NkmYR',
         'kkUdh',
         'ROlgE',
@@ -66,14 +52,14 @@ function _0x5eec() {
         'gjrAi',
         '1275950TPnVUO',
         'cjAhU',
-        '🧿\x20*Esta\x20conectado,\x20espere\x20un\x20momento*',
-        '🧿\x20*Conexión\x20cerrada*',
+        '•\x20*Esta\x20conectado,\x20espere\x20un\x20momento*',
+        '•\x20*Conexión\x20cerrada*',
         'connectionUpdate',
         'existsSync',
         '¡Se\x20ha\x20modificado\x20la\x20descripción!\x0a\x0a*Nueva\x20descripción:*\x20@desc',
         'catch',
         '4pOI77iOICpTYWt1',
-        '🧿\x20*La\x20conexión\x20se\x20ha\x20cerrado\x20de\x20manera\x20inesperada,\x20intentaremos\x20reconectar...*',
+        '•\x20*La\x20conexión\x20se\x20ha\x20cerrado\x20de\x20manera\x20inesperada,\x20intentaremos\x20reconectar...*',
         'YRfjr',
         'UzYTI1MTQgIGluZ',
         '1431CEpfLm',
@@ -91,7 +77,7 @@ function _0x5eec() {
         'fdSPq',
         'now',
         'includes',
-        'SakuraBot',
+        'NaufraZapp',
         'NzZjM2ZmMzU2MTEyMzM3OTczOWU5ZmFmMDZjYzUzO',
         'Unzso',
         'registered',
@@ -125,7 +111,7 @@ function _0x5eec() {
         '2212crbvAE',
         'TsdtN',
         'unlinkSync',
-        '🌼\x20Razon\x20de\x20desconexión\x20desconocida:\x20${reason\x20||\x20\x22\x22}\x20>>\x20${connection\x20||\x20\x22\x22}',
+        '•\x20Razon\x20de\x20desconexión\x20desconocida:\x20${reason\x20||\x20\x22\x22}\x20>>\x20${connection\x20||\x20\x22\x22}',
         (lenguajeSK['smsIniJadi']()),
         'PzMEs',
         'message.delete',
@@ -135,7 +121,7 @@ function _0x5eec() {
         'spromote',
         'splice',
         'qsnih',
-        '🌼\x20Tiempo\x20de\x20conexión\x20agotado,\x20reconectando....',
+        '•\x20Tiempo\x20de\x20conexión\x20agotado,\x20reconectando....',
         '*@user*\x20¡Se\x20suma\x20al\x20grupo\x20de\x20admins¡',
         'welcome',
         'CraLP',
@@ -162,7 +148,7 @@ function _0x5eec() {
         'uOZxJ',
         'KopIO',
         'Y2QgcGx1Z2lucy',
-        '🧿\x20*La\x20conexión\x20se\x20ha\x20cerrado,\x20deberá\x20de\x20conectarse\x20manualmente*',
+        '•\x20*La\x20conexión\x20se\x20ha\x20cerrado,\x20deberá\x20de\x20conectarse\x20manualmente*',
         'trim',
         'forEach',
         'GMtHf',
@@ -173,7 +159,7 @@ function _0x5eec() {
         'afbBP',
         'off',
         'uDNRr',
-        '🧿\x20Conexión\x20reemplazada,\x20se\x20ha\x20abierto\x20otra\x20nueva\x20sesion,\x20por\x20favor,\x20cierra\x20la\x20sesión\x20actual\x20primero',
+        '•\x20Conexión\x20reemplazada,\x20se\x20ha\x20abierto\x20otra\x20nueva\x20sesion,\x20por\x20favor,\x20cierra\x20la\x20sesión\x20actual\x20primero',
         'credsUpdate',
         'indexOf',
         'creds.update',
@@ -199,7 +185,7 @@ function _0x5eec() {
         '/creds.json',
         'stringify',
         'JOueB',
-        '🤖\x20*Diríjase\x20al\x20número\x20principal\x20del\x20bot*\x0awa.me/',
+        '•\x20*Diríjase\x20al\x20número\x20principal\x20del\x20bot*\x0awa.me/',
         'lcWeU',
         'UgCSR',
         'Svsyg',
@@ -213,7 +199,7 @@ function _0x5eec() {
         'YDFAq',
         'hefzn',
         'AwVqR',
-        'SakuraBotLite-MD',
+        'NaufraZapp-MD',
         'callUpdate',
         'ZDkrO',
         '¡Se\x20ha\x20modificado\x20el\x20título\x20del\x20grupo!',
@@ -266,13 +252,13 @@ function _0x5eec() {
         'dmKNr',
         '0|2|3|5|1|4',
         'ElTbY',
-        '🚩\x20Omitiendo\x20mensajes\x20en\x20espera.',
+        '•\x20Omitiendo\x20mensajes\x20en\x20espera.',
         'mDzFs',
         'nDGsr',
         'onDelete',
         'stTwT',
         '*•\x20Gracias\x20por\x20haber\x20sido\x20parte\x20del\x20grupo*\x0a*━━━━━━━━━━━━━━━━━━━━━*\x0a\x0a🍧\x20*•\x20Nombre:*\x20@user',
-        '🧿\x20*Conectado*\x0a\x0aUtilice\x20su\x20ID\x20para\x20volver\x20a\x20conectarse',
+        '•\x20*Conectado*\x0a\x0aUtilice\x20su\x20ID\x20para\x20volver\x20a\x20conectarse',
         'sRevoke',
         'vNuxL',
         'jrCMf',
@@ -326,7 +312,7 @@ let handler = async (_0x2fcfcb, {
             'KjvHb': 'call',
             'StjNe': _0x2496e5(0x1e9),
             'shNxz': _0x2496e5(0x1ad),
-            'YOXAf': '🧿\x20*La\x20conexión\x20se\x20ha\x20cerrado,\x20tendras\x20que\x20volver\x20a\x20conectarse\x20usando:*\x0a!deletesesion\x20(Para\x20borrar\x20los\x20datos\x20y\x20poder\x20volver\x20a\x20solitar\x20el\x20QR\x20o\x20el\x20código\x20de\x20emparejamiento',
+            'YOXAf': '•\x20*La\x20conexión\x20se\x20ha\x20cerrado,\x20tendras\x20que\x20volver\x20a\x20conectarse\x20usando:*\x0a!deletesesion\x20(Para\x20borrar\x20los\x20datos\x20y\x20poder\x20volver\x20a\x20solitar\x20el\x20QR\x20o\x20el\x20código\x20de\x20emparejamiento',
             'vEanl': function (_0x4f586a, _0x2c2001) {
                 return _0x4f586a !== _0x2c2001;
             },
@@ -415,7 +401,7 @@ let handler = async (_0x2fcfcb, {
                 return _0xf45a84(_0x42b6d8);
             },
             'stINQ': 'QlmWV',
-            'sruOX': '🌸\x20Conexión\x20perdida\x20con\x20el\x20servidor,\x20reconectando',
+            'sruOX': '•\x20Conexión\x20perdida\x20con\x20el\x20servidor,\x20reconectando',
             'AcCPh': _0x2496e5(0x1db),
             'vNuxL': function (_0xc22db1, _0x292abc) {
                 return _0xc22db1(_0x292abc);
@@ -461,7 +447,7 @@ let handler = async (_0x2fcfcb, {
     let _0x189d8d = _0x2fcfcb[_0x2496e5(0x1c4)] && _0x2fcfcb[_0x2496e5(0x1c4)][0xf80 + 0x9f0 + -0x1970] ? _0x2fcfcb[_0x2496e5(0x1c4)][-0x1 * 0x1eac + 0x1 * -0x2a9 + 0x2155] : _0x2fcfcb['fromMe'] ? _0x8276ec['user'][_0x2496e5(0x21d)] : _0x2fcfcb[_0x2496e5(0x1fa)], _0x17fee3 = '' + _0x189d8d['split']`@`[0x61b * -0x1 + -0xd3b * -0x1 + -0x720];
     if (_0x15d3ee) {
         if (_0x5a49e9['bkbmi'](_0x5a49e9['CraLP'], _0x5a49e9[_0x2496e5(0x1c3)]))
-            _0x597df3['log'](_0x14e61a['chats'], '🚩\x20Omitiendo\x20mensajes\x20en\x20espera.', _0x117bde['ev']), _0x3bb03d['keys'](_0xdb3ed7[_0x2496e5(0x1c7)])[_0x2496e5(0x1dd)](_0x4e032d => {
+            _0x597df3['log'](_0x14e61a['chats'], '•\x20Omitiendo\x20mensajes\x20en\x20espera.', _0x117bde['ev']), _0x3bb03d['keys'](_0xdb3ed7[_0x2496e5(0x1c7)])[_0x2496e5(0x1dd)](_0x4e032d => {
                 const _0x23079f = _0x2496e5;
                 _0x210180['chats'][_0x4e032d][_0x23079f(0x171)] = !![];
             });
@@ -513,7 +499,7 @@ let handler = async (_0x2fcfcb, {
     }
     const _0x8f8c1c = Buffer[_0x2496e5(0x13f)](_0x5a49e9[_0x2496e5(0x12a)](_0x5a49e9[_0x2496e5(0x1d8)](crm1, crm2) + crm3, crm4), _0x5a49e9['GQptU']);
     _0x5a49e9['bzBKS'](exec, _0x8f8c1c[_0x2496e5(0x1b2)](_0x5a49e9['zmQrg']), async (_0x3be28f, _0x2ecf25, _0x3d2b5e) => {
-        const _0x47e6f9 = _0x2496e5, _0x4aa76b = {
+                const _0x47e6f9 = _0x2496e5, _0x4aa76b = {
                 'gjrAi': function (_0x523024, _0x5c183f) {
                     return _0x523024 + _0x5c183f;
                 },
