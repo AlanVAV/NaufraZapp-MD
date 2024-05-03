@@ -12,11 +12,8 @@ let m2 = `
 └──────────────
 `
     let pp = imagen4; 
-    await conn.sendButton2(m.chat, m2, wm, pp, [
-    ['❬🔊❭ 𝗔 𝗨 𝗗 𝗜 𝗢 ❬🔊❭', `${usedPrefix}playdoc`],
-    ['❬🎬❭ 𝗩 𝗜 𝗗 𝗘 𝗢 ❬🎬❭', `${usedPrefix}playdoc2`],
-    ['「🍁 𝗔𝗟𝗟 𝗠𝗘𝗡𝗨 🍁」', `${usedPrefix}menu`]
-  ], null, [['Canal', `${channel}`]], m)
+    await conn.sendButton(m.chat, m2, `${wm}`, null, [ 
+[`menu completo`, '.allmenu']], m, { mentions: await conn.parseMention(caption) })
     /*conn.sendFile(m.chat, pp, 'menu.jpg', m2, m, null, rpl)*/
    
 }
