@@ -131,7 +131,7 @@ console.log(`error`)
 console.log(e)}}
 
 handler.command = /^(menu|menú|memu|memú|help\?)$/i
-handler.register = true
+handler.register = false
 export default handler
 
 const more = String.fromCharCode(8206)
