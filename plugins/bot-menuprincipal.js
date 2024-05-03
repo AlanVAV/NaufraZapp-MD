@@ -36,7 +36,7 @@ let menu = `
 └•⌕ *ver el horario*
 ┌• ${usedPrefix}comprar
 └•⌕ *comprar bot*
-┌• ${usedPrefix}hosting
+┌• ${usedPrefix}comprar
 └•⌕ *comprar servidores*
 ┌• ${usedPrefix}infobot
 └•⌕ *información del bot*
@@ -44,8 +44,6 @@ let menu = `
 └•⌕ *rapidez del bot*
 ┌• ${usedPrefix}ping
 └•⌕ *rapidez del bot*
-┌• ${usedPrefix}listprem
-└•⌕ *lista de usuarios premium*
 ┌• ${usedPrefix}sc
 └•⌕ *script*
 ┌• ${usedPrefix}scrip
@@ -67,20 +65,12 @@ let menu = `
 ┕━━━━━━━━━━━━━━━━━━━•𖥔 ࣪˖
 ┌• ${usedPrefix}deletesesion
 └•⌕ *eliminar sesion*
-┌• ${usedPrefix}serbot
-└•⌕ *escanea con código QR*
-┌• ${usedPrefix}serbot --code 
-└•⌕ *Registra con código de 8 dígitos*
-┌• ${usedPrefix}codesub2
+┌• ${usedPrefix}nzcode
 └•⌕ *Registra con código de 8 dígitos*
 ┌• ${usedPrefix}subbots
 └•⌕ *ver sub bots*
-┌• ${usedPrefix}bcbots
-└•⌕ *mensaje para todos los subbots*
 ┌• ${usedPrefix}stop
-└•⌕ *apagar mi sub bot*
-┌• ${usedPrefix}token
-└•⌕ *token para ser sub bot.*
+└•⌕ *apagar el subbot*
 
 
 ┍━━━━━━━━━━━━━━━━━━━•𖥔 ࣪˖
@@ -357,83 +347,6 @@ let menu = `
 
 
 ┍━━━━━━━━━━━━━━━━━━━•𖥔 ࣪˖
-│「🍃ִֶָ 𖥔 ࣪˖𝑴𝑨𝑲𝑬𝑹ִֶָ 𖥔 ࣪˖🍃」
-┕━━━━━━━━━━━━━━━━━━━•𖥔 ࣪˖
-┌• ${usedPrefix}blur
-└•⌕ *texto*
-┌• ${usedPrefix}gay
-└•⌕ *@tag*
-┌• ${usedPrefix}hornycard
-└•⌕ *@tag*
-┌• ${usedPrefix}stupid
-└•⌕ *@tag*
-┌• ${usedPrefix}pixel
-└•⌕ *@tag*
-┌• ${usedPrefix}pixelar
-└•⌕ *@tag*
-┌• ${usedPrefix}simpcard
-└•⌕ *@tag*
-┌• ${usedPrefix}ytcomment
-└•⌕ *texto*
-┌• ${usedPrefix}logohacker
-└•⌕ *texto*
-┌• ${usedPrefix}aovwallpaper
-└•⌕ *texto*
-┌• ${usedPrefix}link1
-└•⌕ *texto*
-┌• ${usedPrefix}logofreefire
-└•⌕ *texto*
-┌• ${usedPrefix}memelogo
-└•⌕ *texto*
-┌• ${usedPrefix}memelogo2
-└•⌕ *texto*
-┌• ${usedPrefix}boom
-└•⌕ *texto*
-┌• ${usedPrefix}graffiticartoon
-└•⌕ *texto*
-┌• ${usedPrefix}girlgamer
-└•⌕ *texto*
-┌• ${usedPrefix}firework
-└•⌕ *texto*
-┌• ${usedPrefix}cardchristmas
-└•⌕ *texto*
-┌• ${usedPrefix}flowercard
-└•⌕ *texto*
-┌• ${usedPrefix}gold
-└•⌕ *texto*
-┌• ${usedPrefix}handlove
-└•⌕ *texto*
-┌• ${usedPrefix}heartcup
-└•⌕ *texto*
-┌• ${usedPrefix}heartflashlight
-└•⌕ *texto*
-┌• ${usedPrefix}birthdaycake
-└•⌕ *texto*
-┌• ${usedPrefix}birthdaycake3
-└•⌕ *texto*
-┌• ${usedPrefix}facebooksilverplay
-└•⌕ *texto*
-┌• ${usedPrefix}neonsantin
-└•⌕ *texto*
-┌• ${usedPrefix}facebooksilverplay2
-└•⌕ *texto*
-┌• ${usedPrefix}womenday
-└•⌕ *texto*
-┌• ${usedPrefix}summerysand
-└•⌕ *texto*
-┌• ${usedPrefix}wetglass
-└•⌕ *texto*
-┌• ${usedPrefix}mylove
-└•⌕ *texto*
-┌• ${usedPrefix}pikachu
-└•⌕ *texto*
-┌• ${usedPrefix}logochristmas
-└•⌕ *texto*
-┌• ${usedPrefix}birthdaycake2
-└•⌕ *texto*
-
-
-┍━━━━━━━━━━━━━━━━━━━•𖥔 ࣪˖
 │「🔱ִֶָ 𖥔 ࣪˖𝑷𝒂𝒓𝒂 𝑶𝒘𝒏𝒆𝒓𝒔ִֶָ 𖥔 ࣪˖🔱」
 ┕━━━━━━━━━━━━━━━━━━━•𖥔 ࣪˖
 ┌• ${usedPrefix}addowner
@@ -633,7 +546,7 @@ return
     }
 }
 
-handler.command = /^(menu|memu|\?)$/i
+handler.command = /^(allmenu|menucompleto|\?)$/i
 export default handler
 
 function clockString(ms) {
