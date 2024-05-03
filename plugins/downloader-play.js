@@ -27,7 +27,7 @@ const texto1 = `
 ⏪                           ⏸️                          ⏩
 `.trim()
 
-await conn.sendButton(m.chat, wm, texto1, yt_play[0].thumbnail, [['🌎 𝙈𝙚𝙣𝙪 🌎', '/menu']], m, md)
+await conn.sendButton(m.chat, wm, texto1, yt_play[0].thumbnail, [['🌎 𝙈𝙚𝙣𝙪 🌎', '/menucompleto']], m, md)
 
 let listSections = [];             
 listSections.push({
