@@ -93,7 +93,7 @@ let menu = `
       
 const buttonParamsJson = JSON.stringify({
 title: "VER LISTA",
-description: "Infórmate por medios oficiales sobre GataBot",
+description: "Información corta de NZ",
 sections: [
 { title: "✅ MENU ✅", highlight_label: "Popular",
 rows: [
@@ -110,8 +110,8 @@ rows: [
 ]})
 const interactiveMessage = {
 body: { text: menu },
-footer: { text: wm + ` \nSi algo no funciona utilice el comando *${usedPrefix}reporte*` },
-header: { title: `MENU OFICIAL NZ`, subtitle: "test4", hasMediaAttachment: false },
+footer: { text: wm + ` \nSi hay errores, use el comando: *${usedPrefix}menucompleto*` },
+header: { title: `MENU OFICIAL NZ\n`, subtitle: "test4", hasMediaAttachment: false },
 nativeFlowMessage: { buttons: [{ 
 name: "single_select",
 buttonParamsJson
