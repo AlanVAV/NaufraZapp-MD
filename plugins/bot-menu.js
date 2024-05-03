@@ -39,7 +39,7 @@ Gracias por estar aqui. ✨
 
 💚 Tambien puedes registrarte 🥳`
 
-await conn.sendButton(m.chat, menu, wm, null, [
+conn.sendButton(m.chat, menu, `Bienvenido/a`, a, null, [
       ['🥏 𝗠𝗲𝗻𝘂 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗼 🥏', `${usedPrefix}menucompleto`],
       ['✅ 𝗔𝘂𝘁𝗼𝗿𝗲𝗴𝗶𝘀𝘁𝗿𝗮𝗿 ✅', `${usedPrefix}reg SubNZ.18`],
       [`💎 𝗖𝗿𝗲𝗮𝗱𝗼𝗿 💎`, `${usedPrefix}creador`]
@@ -53,7 +53,7 @@ console.log(e)
 handler.help = ['menu']
 handler.tags = ['bot']
 handler.command = /^(menu|memu|menú)$/i
-handler.register = true
+handler.register = false
 
 export default handler
 
