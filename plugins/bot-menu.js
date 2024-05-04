@@ -1,5 +1,5 @@
 let handler = async (m, { conn, command, usedPrefix }) => {
-let pp = menusImgs4.getRandom()
+let pp = menusImgs2.getRandom()
 let name = await conn.getName(m.sender)
 let _uptime = process.uptime() * 1000
 let _muptime
