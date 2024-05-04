@@ -1,4 +1,3 @@
-
 import { getDevice } from '@whiskeysockets/baileys'
 import fs from 'fs'
 import moment from 'moment-timezone'
@@ -69,7 +68,7 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 let mentionedJid = [who]
 let username = conn.getName(who)
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
-let pp = menusImgs4
+let pp = menusImgs4.getRandom()
 let vn = 'https://qu.ax/bfaM.mp3'
 let pareja = global.db.data.users[m.sender].pasangan 
 //let fsizedoc = '1'.repeat(10)
@@ -110,12 +109,12 @@ rows: [
 ]},
 { title: "💥 APARTADO DE MENU 💥", highlight_label: "Popular",
 rows: [
-{ header: "💯 MENU COMPLETO 💯", title: "Mirar el menu completo", description: "Mira todos los comandos del bot 🔥", id: usedPrefix + "menucompleto" }
-{ header: "🔊 MENU DE AUDIOS 🔊", title: "Mirar el menu de audios", description: "Escucha audios con el bot 🤖", id: usedPrefix + "menuadv" }
-{ header: "⬇️ MENU DE DESCARGAS ⬇️", title: "Mirar menu de descargas", description: "Los comandos para descargar estan aqui 💯", id: usedPrefix + "menudown" }
-{ header: "🎊 MENU RPG 🎊", title: "Mirar el menu de rpg", description: "Sube de nivel y gana mas economia 🪙", id: usedPrefix + "menurpg" }
-{ header: "🧰 MENU HERRAMIENTAS 🧰", title: "Mirar el menu de herramientas", description: "Comandos utiles en este apartado ✅", id: usedPrefix + "menuhrmts" }
-{ header: "🥳 MENU STICKERS 🥳", title: "Mirar el menu de stickers", description: "Puedes hacer stickers en este apartado 👀", id: usedPrefix + "menustick" }
+{ header: "💯 MENU COMPLETO 💯", title: "Mirar el menu completo", description: "Mira todos los comandos del bot 🔥", id: usedPrefix + "menucompleto" },
+{ header: "🔊 MENU DE AUDIOS 🔊", title: "Mirar el menu de audios", description: "Escucha audios con el bot 🤖", id: usedPrefix + "menuadv" },
+{ header: "⬇️ MENU DE DESCARGAS ⬇️", title: "Mirar menu de descargas", description: "Los comandos para descargar estan aqui 💯", id: usedPrefix + "menudown" },
+{ header: "🎊 MENU RPG 🎊", title: "Mirar el menu de rpg", description: "Sube de nivel y gana mas economia 🪙", id: usedPrefix + "menurpg" },
+{ header: "🧰 MENU HERRAMIENTAS 🧰", title: "Mirar el menu de herramientas", description: "Comandos utiles en este apartado ✅", id: usedPrefix + "menuhrmts" },
+{ header: "🥳 MENU STICKERS 🥳", title: "Mirar el menu de stickers", description: "Puedes hacer stickers en este apartado 👀", id: usedPrefix + "menustick" },
 { header: "🥏 MENU PARA GRUPOS 🥏", title: "Mirar el menu de grupos", description: "Mejora tu grupo con NaufraZapp-MD 😃", id: usedPrefix + "menugroup" }
 ]}
 ]})
@@ -133,11 +132,11 @@ await conn.relayMessage(m.chat, { viewOnceMessage: { message } }, {})
       
 } else { 
 let menu = `Mensaje de prueba`.trim()
-await conn.sendFile(m.chat, menusImgs4, 'lp.jpg', menu, fkontak, false, { contextInfo: {mentionedJid, externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, title: wm, body: 'Bot de WhatsApp automatico.', previewType: 0, thumbnail: imagen4, sourceUrl: yt}}}) 
+await conn.sendFile(m.chat, menusImgs4, 'naufra.jpg', menu,  fkontak, false, { contextInfo: {mentionedJid, externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, title: wm, body: 'Bot de WhatsApp automatico.', previewType: 0, thumbnail: imagen4, sourceUrl: yt}}}) 
 //await conn.sendMessage(m.chat, { audio: { url: vn }, fileName: 'error.mp3', mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
 //conn.sendFile(m.chat, gataVidMenu.getRandom(), 'gata.mp4', menu, fkontak)
 }} catch (e) {
-await m.reply('error en el comando.')
+await m.reply(m.chat, 'error en el comando.')
 console.log(`error`)
 console.log(e)}}
 
@@ -152,4 +151,4 @@ let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
 let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
 let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
 return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}  
-  
+                                         
