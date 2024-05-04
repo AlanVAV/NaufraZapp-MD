@@ -27,8 +27,7 @@ let estado = `😃 𝗛𝗢𝗟𝗔𝗔𝗔!!! 👋🏻
 `
 await conn.sendButton(m.chat, estado, `Es importante que te registres primero y que tambien vallas al privado del bot si estas en un grupo para usar este comando.\n\n` + wm, pp, [
 ['🌎 MENU COMPLETO 🌎', '.menucompleto'],
-['🔢 PEDIR CODE 🔢', '/nzcode']
-['✅ AUTO VERIFICAR ✅', '#reg NZsub.18']], null, [
+['🔢 PEDIR CODE 🔢', '/nzcode']], null, [
 ['Creador', `${channel}`]], m)
 }
 handler.help = ['estado']
