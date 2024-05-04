@@ -137,7 +137,7 @@ await conn.sendFile(m.chat, menusImgs4, 'lp.jpg', menu, fkontak, false, { contex
 //await conn.sendMessage(m.chat, { audio: { url: vn }, fileName: 'error.mp3', mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
 //conn.sendFile(m.chat, gataVidMenu.getRandom(), 'gata.mp4', menu, fkontak)
 }} catch (e) {
-await m.reply(m.chat, 'error en el comando.')
+await m.reply('error en el comando.')
 console.log(`error`)
 console.log(e)}}
 
