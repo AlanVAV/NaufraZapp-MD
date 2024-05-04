@@ -40,7 +40,7 @@ let estado = `🎒 TUS RECURSOS 🎒
 𝗥𝗮𝗻𝗴𝗼
 • ${role}
 `
-await conn.sendButton(m.chat, estado, `👀 Gana mas recursos!!\n\n` + nameN3, [
+await conn.sendButton(m.chat, estado, `👀 Gana mas recursos!!\n\n` + nameN3, pp, [
 ['ALL MENU', '.menucompleto'], ['MINAR', '/minar'],
 ['COFRE', '#cofre'], ['SUBIR NIVEL', '#levelup']], null, [
 ['Canal', `${channel}`]], m)
