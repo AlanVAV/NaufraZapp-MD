@@ -12,18 +12,18 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
 『✦』Debe de ingresar de estas maneras:
 
 *Para abrir el grupo, es:*
- ${usedPrefix + command} abrir*
+ *${usedPrefix + command} abrir*
  
 *Para cerrar el grupo, es:*
- ${usedPrefix + command} cerrar*
+ *${usedPrefix + command} cerrar*
 `.trim();
   }
   await conn.groupSettingUpdate(m.chat, isClose);
   {m.reply('『✦』Grupo configurado con exito.');}
 };
-handler.help = ['group open / close', 'grupo abrir / cerrar'];
+handler.help = ['nfzgroup open / close', 'nfzgrupo abrir / cerrar'];
 handler.tags = ['group'];
-handler.command = /^(group|grupo)$/i;
+handler.command = /^(nfzgroup|nfzgrupo)$/i;
 handler.admin = true;
 handler.botAdmin = true;
 export default handler;
