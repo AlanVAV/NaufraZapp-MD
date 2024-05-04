@@ -1,105 +1,34 @@
-import pkg from '@whiskeysockets/baileys';
-const { generateWAMessageFromContent, proto } = pkg
-
-var handler = async (m, { conn, usedPrefix }) => {
-
-/*let msg = generateWAMessageFromContent(m.chat, {
-  viewOnceMessage: {
-    message: {
-        "messageContextInfo": {
-          "deviceListMetadata": {},
-          "deviceListMetadataVersion": 2
-        },
-        interactiveMessage: proto.Message.InteractiveMessage.create({
-          body: proto.Message.InteractiveMessage.Body.create({
-            text: "test"
-          }),
-          footer: proto.Message.InteractiveMessage.Footer.create({
-            text: "test"
-          }),
-          header: proto.Message.InteractiveMessage.Header.create({
-            title: "test",
-            subtitle: "test",
-            hasMediaAttachment: false
-          }),
-          nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
-            buttons: [
-              {
-                "name": "single_select",
-                "buttonParamsJson": "{\"title\":\"title\",\"sections\":[{\"title\":\"title\",\"highlight_label\":\"label\",\"rows\":[{\"header\":\"header\",\"title\":\"title\",\"description\":\"description\",\"id\":\"id\"},{\"header\":\"header\",\"title\":\"title\",\"description\":\"description\",\"id\":\"id\"}]}]}"
-              },
-              {
-                "name": "quick_reply",
-                "buttonParamsJson": "{\"display_text\":\"quick_reply\",\"id\":\"message\"}"
-              },
-              {
-                 "name": "cta_url",
-                 "buttonParamsJson": "{\"display_text\":\"url\",\"url\":\"https://www.google.com\",\"merchant_url\":\"https://www.google.com\"}"
-              },
-              {
-                 "name": "cta_call",
-                 "buttonParamsJson": "{\"display_text\":\"call\",\"id\":\"message\"}"
-              },
-              {
-                 "name": "cta_copy",
-                 "buttonParamsJson": "{\"display_text\":\"copy\",\"id\":\"123456789\",\"copy_code\":\"message\"}"
-              },
-              {
-                 "name": "cta_reminder",
-                 "buttonParamsJson": "{\"display_text\":\"cta_reminder\",\"id\":\"message\"}"
-              },
-              {
-                 "name": "cta_cancel_reminder",
-                 "buttonParamsJson": "{\"display_text\":\"cta_cancel_reminder\",\"id\":\"message\"}"
-              },
-              {
-                 "name": "address_message",
-                 "buttonParamsJson": "{\"display_text\":\"address_message\",\"id\":\"message\"}"
-              },
-              {
-                 "name": "send_location",
-                 "buttonParamsJson": ""
-              }
-           ],
-          })
-        })
+const handler = async (m, {conn}) => {
+  try {
+    const pp = imagen4;
+    const img = await(await fetch('https://images3.alphacoders.com/125/1251707.png')).buffer();
+    const _uptime = process.uptime() * 1000;
+    const uptime = clockString(_uptime);
+    const taguser = '@' + m.sender.split('@s.whatsapp.net')[0];
+    await conn.sendMessage(m.chat, { react: { text: '🤖', key: m.key } })
+    const str = `Mensaje de prueba.`.trim();
+    if (m.isGroup) {
+      conn.sendMessage(m.chat, {text: str.trim(), mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: {forwardingScore: 9999999, isForwarded: true, mentionedJid: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.titulowm, "containsAutoReply": true, "mediaType": 1, "thumbnail": pp, "mediaUrl": `https://github.com/Diego-YL-177/Yotsuba-Nakano-MD`, "sourceUrl": `https://github.com/Diego-YL-177/Yotsuba-Nakano-MD`}}}, {quoted: m});
+    } else {
+      const fkontak2 = {'key': {'participants': '0@s.whatsapp.net', 'remoteJid': 'status@broadcast', 'fromMe': false, 'id': 'Halo'}, 'message': {'contactMessage': {'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}, 'participant': '0@s.whatsapp.net'};
+      //conn.sendMessage(m.chat, {text: str.trim(), mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: {forwardingScore: 9999999, isForwarded: true, mentionedJid: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.titulowm, "containsAutoReply": true, "mediaType": 1, "thumbnail": pp, "mediaUrl": `https://github.com/Diego-YL-177/Yotsuba-Nakano-MD`, "sourceUrl": `https://github.com/Diego-YL-177/Yotsuba-Nakano-MD`}}}, {quoted: fkontak2});
+     await conn.sendButton(m.chat, str, wm, pp, [
+    ['Creador', `${usedPrefix}creador`],
+    ['Comprar bot', `${usedPrefix}installbot`]
+  ], null, [['Canal', `${channel}`]], m)
     }
+  } catch {
   }
-}, {})*/
-
-let msg = generateWAMessageFromContent(m.chat, {
-    message: {
-        "messageContextInfo": {
-            "deviceListMetadata": {},
-            "deviceListMetadataVersion": 2
-        },
-        interactiveMessage: proto.Message.InteractiveMessage.create({
-            body: proto.Message.InteractiveMessage.Body.create({
-                text: "test"
-            }),
-            footer: proto.Message.InteractiveMessage.Footer.create({
-                text: "test"
-            }),
-            header: proto.Message.InteractiveMessage.Header.create({
-                title: "test",
-                subtitle: "test",
-                hasMediaAttachment: false
-            }),
-            nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
-                buttons: [
-                    {
-                        "name": "cta_copy",
-                        "buttonParamsJson": "{\"display_text\":\"copy\",\"id\":\"123456789\",\"copy_code\":\"message\"}"
-                    }
-                ]
-            })
-        })
-    }
-}, {})
-
-await conn.relayMessage(msg.key.remoteJid, msg.message, { messageId: msg.key.id })
-
-}
-handler.command = /^(mboton)$/i
-
-export default handler
+};
+handler.help = ['pruebas'];
+handler.tags = ['main'];
+handler.command = /^(mprueba)$/i;
+export default handler;
+function clockString(ms) {
+  const d = isNaN(ms) ? '--' : Math.floor(ms / 86400000);
+  const h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24;
+  const m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60;
+  const s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60;
+  return [`\n┃⍣ *💥 ` + d, ' Día(s)* ', `\n┃⍣ *💫 ` + h, ' Hora(s)* ', `\n┃⍣ *💠 ` + m, ' Minuto(s)* ', `\n┃⍣ *♦ ` + s, ' Segundo(s)* '].map((v) => v.toString().padStart(2, 0)).join('');
+        }
+      
