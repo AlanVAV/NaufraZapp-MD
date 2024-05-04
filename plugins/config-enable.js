@@ -1,5 +1,5 @@
 const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, isROwner}) => {
-  const optionsFull = `Las funciones de mostrar el apagado y activado, no estan disponibles aun.`.trim();
+  const optionsFull = `Para ver las funciones, debes usar el comando *#funcs*`.trim();
 
             const isEnable = /true|enable|(turn)?on|1/i.test(command);
   const chat = global.db.data.chats[m.chat];
