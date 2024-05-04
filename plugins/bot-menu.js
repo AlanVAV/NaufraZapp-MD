@@ -121,14 +121,14 @@ rows: [
 const interactiveMessage = {
 body: { text: menu },
 footer: { text: wm + ` \n*${usedPrefix}menucompleto*` },
-header: { title: `\n👋🏻 Bienvenido/a ${username}`, subtitle: "test4", hasMediaAttachment: true },
+header: { title: `\n👋🏻 Bienvenido/a ${username}`, subtitle: "test4", hasMediaAttachment: false },
 nativeFlowMessage: { buttons: [{ 
 name: "single_select",
 buttonParamsJson
 }]
 }}
 const message = { messageContextInfo: { deviceListMetadata: {}, deviceListMetadataVersion: 2 }, interactiveMessage }
-await conn.relayMessage(m.chat, pp, { viewOnceMessage: { message } }, {})
+await conn.relayMessage(m.chat, menusImgs4.getRandom(), 'naufrago.jpg', { viewOnceMessage: { message } }, {})
       
 } else { 
 let menu = `⬇️ Selecciona los botones ⬇️`.trim()
