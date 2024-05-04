@@ -1,4 +1,40 @@
-import { getDevice } from '@whiskeysockets/baileys'
+let handler = async (m, { conn, command, usedPrefix }) => {
+let pp = menusImgs4.getRandom()
+let name = await conn.getName(m.sender)
+let _uptime = process.uptime() * 1000
+let _muptime
+if (process.send) { process.send('uptime')
+_muptime = await new Promise(resolve => { process.once('message', resolve) 
+setTimeout(resolve, 1000) }) * 1000}
+let uptime = clockString(_uptime)
+let estado = `╭⊰•┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅•⊱╮
+│👋🏻 \`Hola, bienvenido/a\`
+│• Seleccione los botones ⬇️
+╰⊰•┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅•⊱╯
+> También tiene que registrarse
+> use el boton de \`autoverify\`
+• Gracias por usar ${wm}`
+await conn.sendButton(m.chat, estado, wm, pp, [
+['✅ 𝗔𝘂𝘁𝗼𝗩𝗲𝗿𝗶𝗳𝘆 ✅', '.reg NZsub.10'],
+['💯 𝗠𝗲𝗻𝘂 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗼 💯', '/menucompleto'],
+['🛍️ 𝗖𝗼𝗺𝗽𝗿𝗮𝗿 𝗕𝗼𝘁 🛍️', '.installbot'],
+['⬇️ 𝗗𝗲𝘀𝗰𝗮𝗿𝗴𝗮𝗿 ⬇️', '/dlav'],
+['🚀 𝗘𝘀𝘁𝗮𝗱𝗼 🚀', '#estado']], null, [
+['Canal', `${channel}`]
+['YouTube', `${yt}`]], m)
+}
+handler.help = ['estado']
+handler.tags = ['main']
+handler.command = /^(menu)$/i
+export default handler
+
+function clockString(ms) {
+let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
+
+/*import { getDevice } from '@whiskeysockets/baileys'
 import fs from 'fs'
 import moment from 'moment-timezone'
 import fetch from 'node-fetch'
@@ -150,5 +186,4 @@ function clockString(ms) {
 let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
 let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
 let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}  
-      
+return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}*/   
