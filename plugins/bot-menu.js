@@ -121,7 +121,7 @@ rows: [
 const interactiveMessage = {
 body: { text: menu },
 footer: { text: wm + ` \n*${usedPrefix}menucompleto*` },
-header: { title: `\n👋🏻 Bienvenido/a ${taguser}`, subtitle: "test4", hasMediaAttachment: false },
+header: { title: `\n👋🏻 Bienvenido/a ${username}`, subtitle: "test4", hasMediaAttachment: false },
 nativeFlowMessage: { buttons: [{ 
 name: "single_select",
 buttonParamsJson
