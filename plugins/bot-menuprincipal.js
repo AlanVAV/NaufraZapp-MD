@@ -488,8 +488,8 @@ let estado = `┍━━━━━━━━━━━━━━━━━━━•�
 await conn.sendButton(m.chat, estado, wm, pp, [
 ['✅ 𝗔𝗨𝗧𝗢𝗩𝗘𝗥𝗜𝗙𝗬 ✅', '.reg NZsub.18'],
 ['💻 𝗘𝗦𝗧𝗔𝗗𝗢 💻', '/estado'],
-['🛒 𝗖𝗢𝗠𝗣𝗥𝗔𝗥 𝗕𝗢𝗧 🛒', '#installbot']], null, [
-['Canal', `${channel}`]], null, [
+['🛒 𝗖𝗢𝗠𝗣𝗥𝗔𝗥 𝗕𝗢𝗧 🛒', '#installbot']], null, null, [
+['Canal', `${channel}`],
 ['NaufraZapp', `${creador}`]], m)
 }
 handler.help = ['estado']
