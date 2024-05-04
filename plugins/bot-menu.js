@@ -9,7 +9,7 @@ setTimeout(resolve, 1000) }) * 1000}
 let uptime = clockString(_uptime)
 let estado = `Hola, bienvenido usuario/a
 seleccione los botones de abajo.`
-await conn.sendButton(m.chat, estado, `😃 𝗥𝗘𝗖𝗨𝗘𝗥𝗗𝗔 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗥𝗧𝗘 𝗖𝗢𝗡:\nAutoVerify\n🥳 𝗗𝗶𝘀𝗳𝗿𝘂𝘁𝗮 𝗱𝗲𝗹 𝗯𝗼𝘁 💯\n` + menusN3 + '\n' + nameNN2, pp, [
+await conn.sendButton(m.chat, estado, `😃 𝗥𝗘𝗖𝗨𝗘𝗥𝗗𝗔 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗥𝗧𝗘 𝗖𝗢𝗡:\nAutoVerify\n🥳 𝗗𝗶𝘀𝗳𝗿𝘂𝘁𝗮 𝗱𝗲𝗹 𝗯𝗼𝘁 💯\n` + nameN3 + '\n' + nameNN2, pp, [
 ['🍁 Menu Completo 🍁', '.menucompleto'],
 ['🌎 Estado 🌎', '/estado'],
 ['✅ AutoVerify ✅', '#reg NZsub.18']], null, [
