@@ -106,7 +106,7 @@ global.iimg5 = 'https://i.postimg.cc/gJntKTG1/e872a51954db06122d6108df482ef157.j
 //• ↳ ◜𝑳𝑰𝑵𝑲𝑺◞ • 🌿
 global.spacenaufra = 'https://wa.me/5493873687620'
 global.cloudshelln = 'https://shell.cloud.google.com/?show=ide%2Cterminal&authuser=6&fromcloudshell=true'
-global.gp1 = 'https://whatsapp.com/channel/0029VaRibRvDuMRj6ozMSN1l'
+global.gp1 = 'https://chat.whatsapp.com/IxdHYBEnUJ5Eiu3qiDjCTa'
 global.gp2 = 'https://chat.whatsapp.com/IxdHYBEnUJ5Eiu3qiDjCTa'
 global.gp3 = 'https://whatsapp.com/channel/0029VaRibRvDuMRj6ozMSN1l'
 global.channel = 'https://whatsapp.com/channel/0029VaRibRvDuMRj6ozMSN1l'
