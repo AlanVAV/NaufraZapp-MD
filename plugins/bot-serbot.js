@@ -25,9 +25,10 @@ let estado = `😃 𝗛𝗢𝗟𝗔𝗔𝗔!!! 👋🏻
 🌎 𝗠𝗜𝗥𝗔 𝗘𝗟 𝗠𝗘𝗡𝗨 𝗗𝗘𝗟 𝗕𝗢𝗧
 𝗖𝗢𝗡 𝗘𝗟 𝗕𝗢𝗧𝗢𝗡: \`Menu Completo\` 💭
 `
-await conn.sendButton(m.chat, estado, `\n🌳🍃 𝙉𝙤 𝙤𝙡𝙫𝙞𝙙𝙚𝙨 𝙨𝙚𝙜𝙪𝙞𝙧𝙣𝙤𝙨 ✨🌳\n\n` + wm, pp, [
+await conn.sendButton(m.chat, estado, `Es importante que te registres primero y que tambien vallas al privado del bot si estas en un grupo para usar este comando.\n\n` + wm, pp, [
 ['🌎 MENU COMPLETO 🌎', '.menucompleto'],
-['🔢 PEDIR CODE 🔢', '/nzcode']], null, [
+['🔢 PEDIR CODE 🔢', '/nzcode']
+['✅ AUTO VERIFICAR ✅', '#reg NZsub.18']], null, [
 ['Creador', `${channel}`]], m)
 }
 handler.help = ['estado']
