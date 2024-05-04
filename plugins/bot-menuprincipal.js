@@ -1,21 +1,13 @@
-import fs, { promises } from 'fs'
-import fetch from 'node-fetch'
-let handler = async (m, { conn, usedPrefix, command }) => {
-try {
-let d = new Date(new Date + 3600000)
-let locale = 'es'
-let week = d.toLocaleDateString(locale, { weekday: 'long' })
-let date = d.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })
+let handler = async (m, { conn, command, usedPrefix }) => {
+let pp = menusImgs4.getRandom()
+let name = await conn.getName(m.sender)
 let _uptime = process.uptime() * 1000
+let _muptime
+if (process.send) { process.send('uptime')
+_muptime = await new Promise(resolve => { process.once('message', resolve) 
+setTimeout(resolve, 1000) }) * 1000}
 let uptime = clockString(_uptime)
-let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length 
-let more = String.fromCharCode(8206)
-let readMore = more.repeat(850)   
-let taguser = conn.getName(m.sender)
-let user = global.db.data.users[m.sender]
-let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
-let menu = `
-┍━━━━━━━━━━━━━━━━━━━•𖥔 ࣪˖
+let estado = `┍━━━━━━━━━━━━━━━━━━━•𖥔 ࣪˖
 │「📑ִֶָ 𖥔 ࣪˖𝑰𝒏𝒇𝒐𝒓𝒎𝒂𝒄𝒊𝒐𝒏ִֶָ 𖥔 ࣪˖📑」
 ┕━━━━━━━━━━━━━━━━━━━•𖥔 ࣪˖
 ┌• ${usedPrefix}creador
@@ -36,7 +28,7 @@ let menu = `
 └•⌕ *ver el horario*
 ┌• ${usedPrefix}comprar
 └•⌕ *comprar bot*
-┌• ${usedPrefix}comprar
+┌• ${usedPrefix}hosting
 └•⌕ *comprar servidores*
 ┌• ${usedPrefix}infobot
 └•⌕ *información del bot*
@@ -44,6 +36,8 @@ let menu = `
 └•⌕ *rapidez del bot*
 ┌• ${usedPrefix}ping
 └•⌕ *rapidez del bot*
+┌• ${usedPrefix}listprem
+└•⌕ *lista de usuarios premium*
 ┌• ${usedPrefix}sc
 └•⌕ *script*
 ┌• ${usedPrefix}scrip
@@ -54,23 +48,23 @@ let menu = `
 └•⌕ *velocidad del bot*
 ┌• ${usedPrefix}instalarbot
 └•⌕ *instalar el bot*
-┌• ${usedPrefix}installbot
-└•⌕ *instalar el bot*
-┌• tyc
-└•⌕ *terminos y condiciones*
+┌• ${usedPrefix}menu
+└•⌕ *Menu de lista*
 
 
 ┍━━━━━━━━━━━━━━━━━━━•𖥔 ࣪˖
 │「🌎ִֶָ 𖥔 ࣪˖𝑺𝒆𝒓 𝑩𝒐𝒕 𝑵𝒁ִֶָ 𖥔 ࣪˖🌎」
 ┕━━━━━━━━━━━━━━━━━━━•𖥔 ࣪˖
-┌• ${usedPrefix}deletesesion
-└•⌕ *eliminar sesion*
 ┌• ${usedPrefix}nzcode
+└•⌕ *Registra con código de 8 dígitos*
+┌• ${usedPrefix}codesub2
 └•⌕ *Registra con código de 8 dígitos*
 ┌• ${usedPrefix}subbots
 └•⌕ *ver sub bots*
+┌• ${usedPrefix}bcbots
+└•⌕ *mensaje para todos los subbots*
 ┌• ${usedPrefix}stop
-└•⌕ *apagar el subbot*
+└•⌕ *apagar mi sub bot*
 
 
 ┍━━━━━━━━━━━━━━━━━━━•𖥔 ࣪˖
@@ -98,17 +92,9 @@ let menu = `
 └•⌕ *nombre*
 ┌• ${usedPrefix}pinterest
 └•⌕ *texto*
-┌• ${usedPrefix}play
+┌• ${usedPrefix}dlav
 └•⌕ *enlace • texto*
-┌• ${usedPrefix}play2
-└•⌕ *enlace • texto*
-┌• ${usedPrefix}play.1
-└•⌕ *enlace • texto*
-┌• ${usedPrefix}play.2
-└•⌕ *enlace • texto*
-┌• ${usedPrefix}play3
-└•⌕ *enlace • texto*
-┌• ${usedPrefix}play4
+┌• ${usedPrefix}downav
 └•⌕ *enlace • texto*
 ┌• ${usedPrefix}playdoc
 └•⌕ *enlace • texto*
@@ -139,24 +125,6 @@ let menu = `
 ┌• ${usedPrefix}wallpaper2
 └•⌕ *texto*
 ┌• ${usedPrefix}twitter
-└•⌕ *enlace*
-┌• ${usedPrefix}twitter2
-└•⌕ *enlace*
-┌• ${usedPrefix}ytmp3doc
-└•⌕ *enlace*
-┌• ${usedPrefix}ytamp3
-└•⌕ *enlace*
-┌• ${usedPrefix}ytmp3
-└•⌕ *enlace*
-┌• ${usedPrefix}ytest
-└•⌕ *enlace*
-┌• ${usedPrefix}ytmp4doc
-└•⌕ *enlace*
-┌• ${usedPrefix}ytvmp4
-└•⌕ *enlace*
-┌• ${usedPrefix}ytmp4
-└•⌕ *enlace*
-┌• ${usedPrefix}videodoc
 └•⌕ *enlace*
 
 
@@ -516,37 +484,17 @@ let menu = `
 ┌• ${usedPrefix}viewimage
 └•⌕ *Ver img.*
 ┌• ${usedPrefix}reunion
-└•⌕ *Creadores.*
- `.trim()
-    
-const vi = [
-'https://qu.ax/ygwT.mp4',
-  'https://qu.ax/iFCi.mp4',
-     'https://qu.ax/jie.mp4',
-        'https://qu.ax/Pbha.mp4',
-           'https://qu.ax/bdvm.mp4'
-]
-try {
-await conn.sendMessage(m.chat, { video: { url: vi.getRandom() }, gifPlayback: true, caption: menu, contextInfo: yt })
-//await conn.sendMessage(m.chat, { video: { url: vi.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender] }, { quoted: fkontak }) 
-} catch (error) {
-try {
-await conn.sendMessage(m.chat, { image: { url: imgAll.getRandom() }, gifPlayback: false, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fkontak }) 
-} catch (error) {
-try {
-await conn.sendMessage(m.chat, { image: { url: menusImgs3.getRandom() }, gifPlayback: false, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fkontak }) 
-} catch (error) {
-try{
-await conn.sendFile(m.chat, img5, 'menu.jpg', menu, fkontak, false, { mentions: [m.sender, global.conn.user.jid] })
-} catch (error) {
-return 
-}}}} 
-} catch (e) {
-    conn.reply(m.chat, 'Ocurrio un error inesperado.', m);
-    }
+└•⌕ *Creadores.*`
+await conn.sendButton(m.chat, estado, wm, pp, [
+['✅ 𝗔𝗨𝗧𝗢𝗩𝗘𝗥𝗜𝗙𝗬 ✅', '.reg NZsub.18'],
+['💻 𝗘𝗦𝗧𝗔𝗗𝗢 💻', '/estado'],
+['🛒 𝗖𝗢𝗠𝗣𝗥𝗔𝗥 𝗕𝗢𝗧 🛒', '#installbot']], null, [
+['Canal', `${channel}`]], null, [
+['NaufraZapp', `${creador}`]], m)
 }
-
-handler.command = /^(allmenu|menucompleto|\?)$/i
+handler.help = ['estado']
+handler.tags = ['main']
+handler.command = /^(menucompleto)$/i
 export default handler
 
 function clockString(ms) {
@@ -554,3 +502,4 @@ let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
 let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
 let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
 return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
+ 
