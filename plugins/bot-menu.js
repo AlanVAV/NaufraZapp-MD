@@ -8,18 +8,18 @@ _muptime = await new Promise(resolve => { process.once('message', resolve)
 setTimeout(resolve, 1000) }) * 1000}
 let uptime = clockString(_uptime)
 let estado = `╭⊰•┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅•⊱╮
-│👋🏻 \`Hola, bienvenido/a\`
+│👋🏻 Hola, bienvenido/a
 │• Seleccione los botones ⬇️
 ╰⊰•┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅•⊱╯
 > También tiene que registrarse
-> use el boton de \`autoverify\`
+> use el boton de autoverify
 • Gracias por usar ${wm}`
 await conn.sendButton(m.chat, estado, wm, pp, [
 ['✅ 𝗔𝘂𝘁𝗼𝗩𝗲𝗿𝗶𝗳𝘆 ✅', '.reg NZsub.10'],
 ['💯 𝗠𝗲𝗻𝘂 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗼 💯', '/menucompleto'],
-['🛍️ 𝗖𝗼𝗺𝗽𝗿𝗮𝗿 𝗕𝗼𝘁 🛍️', '.installbot'],
-['⬇️ 𝗗𝗲𝘀𝗰𝗮𝗿𝗴𝗮𝗿 ⬇️', '/dlav'],
-['🚀 𝗘𝘀𝘁𝗮𝗱𝗼 🚀', '#estado']], null, [
+['🛍️ 𝗖𝗼𝗺𝗽𝗿𝗮𝗿 𝗕𝗼𝘁 🛍️', '!installbot'],
+['⬇️ 𝗗𝗲𝘀𝗰𝗮𝗿𝗴𝗮𝗿 ⬇️', '#dlav'],
+['🚀 𝗘𝘀𝘁𝗮𝗱𝗼 🚀', '*estado']], null, [
 ['Canal', `${channel}`]
 ['YouTube', `${yt}`]], m)
 }
