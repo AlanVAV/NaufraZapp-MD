@@ -7,7 +7,7 @@ await conn.sendButton(m.chat, str, `Ajustes para grupos.\n` + author, media, [
 ['👥 Banear chat', '.banchat'],
 ['⏱️ Cerrar por 1H', '#grouptime on 1'],
 ['👥 Cerrar el grupo', '/grupo cerrar']], null, [
-['Canal', `${channel}`]], fkontak)}
+['Canal', `${channel}`]], m)}
 handler.command = /^ajgrupo$/i
 handler.exp = 80
 export default handler
