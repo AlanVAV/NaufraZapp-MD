@@ -95,27 +95,27 @@ description: "Informacion de la lista",
 sections: [
 { title: "💭 APARTADO DE ESTADOS 💭", highlight_label: "Popular",
 rows: [
-{ header: "🤖 ESTADO 🤖", title: "Mirar estado del bot", description: "Mira el estado del bot para comprender mejor ❤️", id: usedPrefix + "estado" },
-{ header: "🛍️  COMPRAR BOT 🛍️", title: "Obten el bot en 24/7", description: "Obten el bot activo todos los dias en tu grupo 🔥", id: usedPrefix + "grupos" },
-{ header: "💚 GRUPO OFICIAL 💚", title: "Participa", description: "Participa con nosotros y se parte de la comunidad ✨", id: usedPrefix + "gruponz" },
-{ header: "✅ AUTO VERIFICADO ✅", title: "Verificate", description: "Verificate automáticamente con este comando 🥳", id: usedPrefix + "reg NZsub.18" }
+{ header: "🤖 ESTADO 🤖", title: "Mirar estado del bot", description: "Mira el estado del bot para comprender mejor ❤️", id: `${usedPrefix}estado` },
+{ header: "🛍️  COMPRAR BOT 🛍️", title: "Obten el bot en 24/7", description: "Obten el bot activo todos los dias en tu grupo 🔥", id: `${usedPrefix}installbot` },
+{ header: "💚 GRUPO OFICIAL 💚", title: "Participa", description: "Participa con nosotros y se parte de la comunidad ✨", id: `${usedPrefix}gruponz` },
+{ header: "✅ AUTO VERIFICADO ✅", title: "Verificate", description: "Verificate automáticamente con este comando 🥳", id: `${usedPrefix}reg NZsub.18` }
 ]},
 { title: "🎒 UTILIDADES 🎒", highlight_label: "Popular",
 rows: [
-{ header: "🥳 SER SUB BOT 🥳", title: "Hazte un subbot", description: "Vincula tu numero con el bot para ser un subbot 🥳", id: usedPrefix + "nzcode" },
-{ header: "🎬 DESCARGA VIDEOS Y AUDIOS 🎧", title: "Descarga en multimedia", description: "Descarga audios o videos a tu gusto 💎", id: usedPrefix + "serbot" },
-{ header: "📦 DESCARGA APLICACIÓNES 📦", title: "Descarga apk", description: "Descarga aplicaciones sin gastar tus datos ❤️", id: usedPrefix + "apk" },
-{ header: "😃 CHAT GPT 😃", title: "Chatgpt a disposición", description: "Habla con chatgpt si deseas saber algo 👀", id: usedPrefix + "chatgpt hola" }
+{ header: "🥳 SER SUB BOT 🥳", title: "Hazte un subbot", description: "Vincula tu numero con el bot para ser un subbot 🥳", id: `${usedPrefix}nzcode` },
+{ header: "🎬 DESCARGA VIDEOS Y AUDIOS 🎧", title: "Descarga en multimedia", description: "Descarga audios o videos a tu gusto 💎", id: `${usedPrefix}dlav` },
+{ header: "📦 DESCARGA APLICACIÓNES 📦", title: "Descarga apk", description: "Descarga aplicaciones sin gastar tus datos ❤️", id: `${usedPrefix}apk`, true },
+{ header: "😃 CHAT GPT 😃", title: "Chatgpt a disposición", description: "Habla con chatgpt si deseas saber algo 👀", id: `${usedPrefix}chatgpt hola` }
 ]},
 { title: "💥 APARTADO DE MENU 💥", highlight_label: "Popular",
 rows: [
-{ header: "💯 MENU COMPLETO 💯", title: "Mirar el menu completo", description: "Mira todos los comandos del bot 🔥", id: usedPrefix + "menucompleto" },
-{ header: "🔊 MENU DE AUDIOS 🔊", title: "Mirar el menu de audios", description: "Escucha audios con el bot 🤖", id: usedPrefix + "menuadv" },
-{ header: "⬇️ MENU DE DESCARGAS ⬇️", title: "Mirar menu de descargas", description: "Los comandos para descargar estan aqui 💯", id: usedPrefix + "menudown" },
+{ header: "💯 MENU COMPLETO 💯", title: "Mirar el menu completo", description: "Mira todos los comandos del bot 🔥", id: `${usedPrefix}menucompleto` },
+{ header: "🔊 MENU DE AUDIOS 🔊", title: "Mirar el menu de audios", description: "Escucha audios con el bot 🤖", id: `${usedPrefix}menuadv` },
+{ header: "⬇️ MENU DE DESCARGAS ⬇️", title: "Mirar menu de descargas", description: "Los comandos para descargar estan aqui 💯", id: `${usedPrefix}menudown` },
 { header: "🎊 MENU RPG 🎊", title: "Mirar el menu de rpg", description: "Sube de nivel y gana mas economia 🪙", id: usedPrefix + "menurpg" },
-{ header: "🧰 MENU HERRAMIENTAS 🧰", title: "Mirar el menu de herramientas", description: "Comandos utiles en este apartado ✅", id: usedPrefix + "menuhrmts" },
-{ header: "🥳 MENU STICKERS 🥳", title: "Mirar el menu de stickers", description: "Puedes hacer stickers en este apartado 👀", id: usedPrefix + "menustick" },
-{ header: "🥏 MENU PARA GRUPOS 🥏", title: "Mirar el menu de grupos", description: "Mejora tu grupo con NaufraZapp-MD 😃", id: usedPrefix + "menugroup" }
+{ header: "🧰 MENU HERRAMIENTAS 🧰", title: "Mirar el menu de herramientas", description: "Comandos utiles en este apartado ✅", id: `${usedPrefix}memuhrmts` },
+{ header: "🥳 MENU STICKERS 🥳", title: "Mirar el menu de stickers", description: "Puedes hacer stickers en este apartado 👀", id: `${usedPrefix}menustick` },
+{ header: "🥏 MENU PARA GRUPOS 🥏", title: "Mirar el menu de grupos", description: "Mejora tu grupo con NaufraZapp-MD 😃", id: `${usedPrefix}menugroup` }
 ]}
 ]})
 const interactiveMessage = {
