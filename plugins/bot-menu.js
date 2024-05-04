@@ -1,5 +1,5 @@
 let handler = async (m, { conn, command, usedPrefix }) => {
-let pp = menusImgs4.getRandom()
+let pp = gataMenu
 let name = await conn.getName(m.sender)
 let _uptime = process.uptime() * 1000
 let _muptime
@@ -7,23 +7,17 @@ if (process.send) { process.send('uptime')
 _muptime = await new Promise(resolve => { process.once('message', resolve) 
 setTimeout(resolve, 1000) }) * 1000}
 let uptime = clockString(_uptime)
-let estado = `╭⊰•┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅•⊱╮
-│👋🏻 Hola, bienvenido/a
-│• Seleccione los botones ⬇️
-╰⊰•┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅•⊱╯
-> También tiene que registrarse
-> use el boton de autoverify
-• Gracias por usar ${wm}`
-await conn.sendButton(m.chat, estado, wm, pp, [
-['✅ 𝗔𝘂𝘁𝗼𝗩𝗲𝗿𝗶𝗳𝘆 ✅', '.reg NZsub.10'],
-['💯 𝗠𝗲𝗻𝘂 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗼 💯', '/menucompleto'],
-['🚀 𝗘𝘀𝘁𝗮𝗱𝗼 🚀', '*estado']], null, [
-['Canal', `${channel}`]
-['YouTube', `${yt}`]], m)
+let estado = `Hola, bienvenido usuario/a
+seleccione los botones de abajo.`
+await conn.sendButton(m.chat, estado, `😃 𝗥𝗘𝗖𝗨𝗘𝗥𝗗𝗔 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗥𝗧𝗘 𝗖𝗢𝗡: AutoVerify\n\n` + wm, pp, [
+['🍁Menu Completo 🍁', '.menucompleto'],
+['🌎 Estado 🌎', '/estado'],
+['✅ AutoVerify ✅', '#reg NZsub.18']], null, [
+['Canal', `${channel}`]], m)
 }
 handler.help = ['estado']
 handler.tags = ['main']
-handler.command = /^(menu)$/i
+handler.command = /^(menu|help|comandos)$/i
 export default handler
 
 function clockString(ms) {
