@@ -1,5 +1,5 @@
 let handler = async (m, { conn, command, usedPrefix }) => {
-let pp = menusImgs3.getRandom()
+let pp = menusImgs4.getRandom()
 let name = await conn.getName(m.sender)
 let _uptime = process.uptime() * 1000
 let _muptime
@@ -9,11 +9,12 @@ setTimeout(resolve, 1000) }) * 1000}
 let uptime = clockString(_uptime)
 let estado = `Hola, bienvenido usuario/a
 seleccione los botones de abajo.`
-await conn.sendButton(m.chat, estado, `😃 𝗥𝗘𝗖𝗨𝗘𝗥𝗗𝗔 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗥𝗧𝗘 𝗖𝗢𝗡: AutoVerify\n\n` + wm, pp, [
-['🍁Menu Completo 🍁', '.menucompleto'],
+await conn.sendButton(m.chat, estado, `😃 𝗥𝗘𝗖𝗨𝗘𝗥𝗗𝗔 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗥𝗧𝗘 𝗖𝗢𝗡:\nAutoVerify\n🥳 𝗗𝗶𝘀𝗳𝗿𝘂𝘁𝗮 𝗱𝗲𝗹 𝗯𝗼𝘁 💯\n` + menusNZ, pp, [
+['🍁 Menu Completo 🍁', '.menucompleto'],
 ['🌎 Estado 🌎', '/estado'],
 ['✅ AutoVerify ✅', '#reg NZsub.18']], null, [
-['Canal', `${channel}`]], m)
+['Canal', `${channel}`],
+['Grupo OFC', `${gp1}`]], m)
 }
 handler.help = ['estado']
 handler.tags = ['main']
