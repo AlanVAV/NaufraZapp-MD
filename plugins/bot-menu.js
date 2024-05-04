@@ -87,7 +87,7 @@ const horarioFecha = lugarFecha.format('dddd, DD [de] MMMM [del] YYYY || HH:mm A
 
 if (!/web|desktop|unknown/gi.test(dispositivo)) {  
 let menu = `
-Lista de prueba.`.trim()
+Funcion de listas`.trim()
       
 const buttonParamsJson = JSON.stringify({
 title: "VER LISTA",
@@ -121,14 +121,14 @@ rows: [
 const interactiveMessage = {
 body: { text: menu },
 footer: { text: wm + ` \n*${usedPrefix}menucompleto*` },
-header: { title: `\n👋🏻 Bienvenido/a ${username}`, subtitle: "test4", hasMediaAttachment: false },
+header: { title: `\n👋🏻 Bienvenido/a ${username}`, subtitle: "test4", hasMediaAttachment: true },
 nativeFlowMessage: { buttons: [{ 
 name: "single_select",
 buttonParamsJson
 }]
 }}
 const message = { messageContextInfo: { deviceListMetadata: {}, deviceListMetadataVersion: 2 }, interactiveMessage }
-await conn.relayMessage(m.chat, { viewOnceMessage: { message } }, {})
+await conn.relayMessage(m.chat, pp, { viewOnceMessage: { message } }, {})
       
 } else { 
 let menu = `⬇️ Selecciona los botones ⬇️`.trim()
