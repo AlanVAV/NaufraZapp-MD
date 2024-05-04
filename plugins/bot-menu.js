@@ -104,7 +104,7 @@ rows: [
 rows: [
 { header: "🥳 SER SUB BOT 🥳", title: "Hazte un subbot", description: "Vincula tu numero con el bot para ser un subbot 🥳", id: `${usedPrefix}nzcode` },
 { header: "🎬 DESCARGA VIDEOS Y AUDIOS 🎧", title: "Descarga en multimedia", description: "Descarga audios o videos a tu gusto 💎", id: `${usedPrefix}dlav` },
-{ header: "📦 DESCARGA APLICACIÓNES 📦", title: "Descarga apk", description: "Descarga aplicaciones sin gastar tus datos ❤️", id: `${usedPrefix}apk`, true },
+{ header: "📦 DESCARGA APLICACIÓNES 📦", title: "Descarga apk", description: "Descarga aplicaciones sin gastar tus datos ❤️", command: `${usedPrefix}apk`, true },
 { header: "😃 CHAT GPT 😃", title: "Chatgpt a disposición", description: "Habla con chatgpt si deseas saber algo 👀", id: `${usedPrefix}chatgpt hola` }
 ]},
 { title: "💥 APARTADO DE MENU 💥", highlight_label: "Popular",
