@@ -14,7 +14,7 @@ await conn.sendButton(m.chat, estado, `😃 𝗥𝗘𝗖𝗨𝗘𝗥𝗗𝗔 �
 ['🌎 Estado 🌎', '/estado'],
 ['✅ AutoVerify ✅', '#reg NZsub.18']], null, [
 ['Canal', `${channel}`],
-['Grupo OFC', `${gp1}`]], m)
+['NaufraZapp', `${creador}`]], m)
 }
 handler.help = ['estado']
 handler.tags = ['main']
